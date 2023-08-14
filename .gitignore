@@ -1,0 +1,9 @@
+vendor
+composer.lock
+
+node_modules
+.DS_Store
+*.local
+/dist
+
+.idea
