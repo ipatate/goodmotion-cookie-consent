@@ -1,6 +1,8 @@
 <template>
-  <div class="relative w-full px-2 py-16 gm-admin_panel sm:px-0">
-    <h1 class="pb-10 text-2xl">{{ __('main.title') }}</h1>
+  <div class="w-full px-2 py-16 gm-admin_panel sm:px-0">
+    <h1 class="pb-5 text-2xl">{{ __('main.title') }}</h1>
+    <Alert />
+    <div class="py-2"></div>
     <TabGroup>
       <TabList class="flex">
         <Tab class="tabbutton">
@@ -15,15 +17,22 @@
         <TabPanel class="tabpanel">Content 2</TabPanel>
       </TabPanels>
     </TabGroup>
+    <div
+      v-show="store.loading === true"
+      class="absolute inset-0 flex items-center justify-center bg-slate-600/0"
+    >
+      <Loader />
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-// import { useMainStore } from "./stores";
+import { useMainStore } from './stores'
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
+import Alert from './components/Alert.vue'
 import Layout from './components/Layout.vue'
-// const store = useMainStore();
+import Loader from './components/Loader.vue'
+const store = useMainStore()
 </script>
 
 <style scoped>

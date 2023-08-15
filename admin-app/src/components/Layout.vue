@@ -4,7 +4,7 @@
     submit-label="settings"
     @submit="submitHandler"
     :actions="false"
-    #default="{ value }"
+    :values="store.layout"
   >
     <fieldset>
       <legend>{{ __('label.consent') }}</legend>
@@ -71,22 +71,14 @@
       class="button button-primary"
       :label="__('button.save')"
     />
-    <pre wrap>{{ value }}</pre>
   </FormKit>
-  <div v-show="store.loading === true" class="gm-admin-panel-loader">
-    <Loader />
-  </div>
 </template>
 
 <script setup>
 import { useMainStore } from '../stores'
-import Loader from './Loader.vue'
 const store = useMainStore()
 
 const submitHandler = (value) => {
-  store.loading = true
-  setTimeout(() => {
-    store.loading = false
-  }, 2000)
+  store.saveValues('save_gcc_layout', value)
 }
 </script>

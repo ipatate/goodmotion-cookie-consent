@@ -2,29 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --gm-text: #363434;
-  --gcc-primary: #62929a;
-  --gcc-secondary: #efecec;
-  --gcc-tertiary: #5c5757;
-}
-
 /** global page */
 body.settings_page_goodmotion-cookie-consent #wpcontent {
   @apply bg-secondary text-typo;
-}
-
-/** loader */
-.gm-admin_panel-loader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(240, 240, 241, 0.4);
 }
 
 /** form */
