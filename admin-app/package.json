@@ -1,61 +1,63 @@
 {
-    "name": "gm-admin-panel",
-    "version": "0.0.1",
-    "description": "App for display admin panel settings",
-    "main": "index.js",
-    "scripts": {
-        "dev": "cross-env APP_ENV=development vite",
-        "build": "APP_ENV=production vite build"
+  "name": "gm-admin-panel",
+  "version": "0.0.1",
+  "description": "App for display admin panel settings",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env APP_ENV=development vite",
+    "build": "APP_ENV=production vite build"
+  },
+  "author": "Faramaz Patrick<info@goodmotion.fr>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-transform-arrow-functions": "^7.22.5",
+    "@vitejs/plugin-legacy": "^4.1.1",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vue/compiler-sfc": "^3.3.4",
+    "autoprefixer": "^10.4.15",
+    "babel-eslint": "^10.1.0",
+    "babel-preset-env": "^1.7.0",
+    "core-js": "^3.32.0",
+    "cross-env": "^7.0.3",
+    "lightningcss": "^1.21.5",
+    "postcss": "^8.4.27",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-preset-env": "^9.1.1",
+    "postcss-url": "^10.1.3",
+    "precss": "^4.0.0",
+    "prettier": "^3.0.1",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.9",
+    "vite-plugin-live-reload": "^3.0.2",
+    "vue": "^3.3.4"
+  },
+  "dependencies": {
+    "@formkit/themes": "^0.18.0",
+    "@formkit/vue": "0.19.0-ea7e008",
+    "@headlessui/vue": "^1.7.15",
+    "@wordpress/i18n": "^4.39.0",
+    "js-cookie": "^3.0.5",
+    "pinia": "^2.1.6",
+    "throttle-debounce": "^5.0.0"
+  },
+  "volta": {
+    "node": "18.17.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
     },
-    "author": "Faramaz Patrick<info@goodmotion.fr>",
-    "license": "ISC",
-    "devDependencies": {
-        "@babel/plugin-transform-arrow-functions": "^7.22.5",
-        "@vitejs/plugin-legacy": "^4.1.1",
-        "@vitejs/plugin-vue": "^4.2.3",
-        "@vue/compiler-sfc": "^3.3.4",
-        "autoprefixer": "^10.4.15",
-        "babel-eslint": "^10.1.0",
-        "babel-preset-env": "^1.7.0",
-        "core-js": "^3.32.0",
-        "cross-env": "^7.0.3",
-        "eslint": "^8.47.0",
-        "eslint-plugin-vue": "^9.17.0",
-        "postcss": "^8.4.27",
-        "postcss-cli": "^10.1.0",
-        "postcss-import": "^15.1.0",
-        "postcss-preset-env": "^9.1.1",
-        "postcss-url": "^10.1.3",
-        "precss": "^4.0.0",
-        "prettier": "^3.0.1",
-        "stylelint": "^15.10.2",
-        "stylelint-config-wordpress": "^17.0.0",
-        "vite": "^4.4.9",
-        "vite-plugin-live-reload": "^3.0.2",
-        "vue": "^3.3.4"
-    },
-    "dependencies": {
-        "axios": "^1.4.0",
-        "js-cookie": "^3.0.5",
-        "pinia": "^2.1.6",
-        "throttle-debounce": "^5.0.0"
-    },
-    "volta": {
-        "node": "18.17.1"
-    },
-    "eslintConfig": {
-        "root": true,
-        "env": {
-            "node": true
-        },
-        "plugins": [],
-        "extends": [
-            "plugin:vue/vue3-essential",
-            "eslint:recommended"
-        ],
-        "rules": {
-            "vue/no-parsing-error": 0,
-            "vue/no-multiple-template-root": 0
-        }
+    "plugins": [],
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "vue/no-parsing-error": 0,
+      "vue/no-multiple-template-root": 0
     }
+  }
 }

@@ -23,29 +23,28 @@ function get_wp_path($path)
 function add_script($slug, $path, $port, $is_admin, $is_ts = false)
 {
     // for plugin
-    $root_path = GOODMOTION_COOKIE_CONSENT_PATH;
-    $public_path = plugin_dir_url('') . GOODMOTION_COOKIE_CONSENT_NAME;
+    $root_path = $is_admin ? GOODMOTION_COOKIE_CONSENT_ADMIN_PATH : GOODMOTION_COOKIE_CONSENT_PATH;
+    $public_path = plugin_dir_url('') . GOODMOTION_COOKIE_CONSENT_NAME . ($is_admin ? '/' . GOODMOTION_COOKIE_CONSENT_ADMIN_DIR : '');
+
     if (WP_ENV !== 'development') {
 
-        $config = Helpers\get_manifest($root_path . 'dist/manifest.json');
+        $config = Helpers\get_manifest($root_path . '/dist/manifest.json');
         if (!$config) {
             return;
         }
-
         // load others files
         $files = get_object_vars($config);
         // order files
         $ordered = Helpers\order_manifest($files);
 
-        var_dump($ordered);
         // loop for enqueue script
         foreach ($ordered as $key => $value) {
-            if (property_exists($value, 'css') === true || strpos($value->src, '.css') !== false) continue;
-            wp_enqueue_script($slug . '-' . $key, $public_path . '/dist/' . $value->file, [], $key, true);
+            if (property_exists($key, 'css') === true || strpos($value->src, '.css') !== false) continue;
+            wp_enqueue_script($slug . '-' . $key, $public_path . '/dist/' . $value->file, ['wp-i18n'], $key, true);
         }
     } else {
         // development
-        wp_enqueue_script($slug, 'http://localhost:' . $port . '/wp-content' . get_wp_path($path) . '/src/main' . ($is_ts ? '.ts' : '.js'), [], strtotime('now'), true);
+        wp_enqueue_script($slug, 'http://localhost:' . $port . '/wp-content' . get_wp_path($path) . '/src/main' . ($is_ts ? '.ts' : '.js'), ['wp-i18n'], strtotime('now'), true);
     }
 }
 
@@ -65,7 +64,10 @@ function enqueue_scripts($slug, $path, $port, $is_admin, $is_ts = false)
         return $tag;
     }, 10, 3);
 
-    add_action($is_admin ? 'enqueue_block_editor_assets' : 'wp_enqueue_scripts', function () use ($slug, $path, $port, $is_admin, $is_ts) {
+    if ($is_admin === false && is_admin()) return;
+
+
+    add_action($is_admin ? 'admin_enqueue_scripts' : 'wp_enqueue_scripts', function () use ($slug, $path, $port, $is_admin, $is_ts) {
         namespace\add_script($slug, $path, $port, $is_admin, $is_ts);
     });
 }
@@ -80,14 +82,14 @@ function enqueue_styles($slug, $path, $is_admin)
     }
     add_action(
         ($is_admin ? 'admin' : 'wp') . '_enqueue_scripts',
-        function () use ($slug, $path) {
+        function () use ($slug, $is_admin) {
             // for plugin
-            $root_path = GOODMOTION_COOKIE_CONSENT_PATH;
-            $public_path = plugin_dir_url('') . GOODMOTION_COOKIE_CONSENT_NAME;
+            $root_path = $is_admin ? GOODMOTION_COOKIE_CONSENT_ADMIN_PATH : GOODMOTION_COOKIE_CONSENT_PATH;
+            $public_path = plugin_dir_url('') . GOODMOTION_COOKIE_CONSENT_NAME . ($is_admin ? '/' . GOODMOTION_COOKIE_CONSENT_ADMIN_DIR : '');
 
             if (WP_ENV !== 'development') {
                 // get file name from manifest
-                $config = Helpers\get_manifest($root_path . 'dist/manifest.json');
+                $config = Helpers\get_manifest($root_path . '/dist/manifest.json');
                 if (!$config) {
                     return;
                 }
@@ -114,7 +116,7 @@ function enqueue_styles($slug, $path, $is_admin)
                         wp_enqueue_style(
                             $slug . '-' . $key,
                             $public_path . '/dist/' . $file,
-                            [],
+                            ['wp-i18n'],
                             $key,
                             'all'
                         );

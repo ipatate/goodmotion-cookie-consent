@@ -1,16 +1,15 @@
-import { resolve, sep } from "path";
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
+import { resolve, sep } from 'path'
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
 // import legacy from '@vitejs/plugin-legacy'
-import liveReload from "vite-plugin-live-reload";
-
+import liveReload from 'vite-plugin-live-reload'
 // https://vitejs.dev/config/
 export default defineConfig({
-  cacheDir: "./node_modules/.vite/admin-app",
+  cacheDir: './node_modules/.vite/admin-app',
   plugins: [
     vue(),
     liveReload([
-      __dirname + "/**/*.php",
+      __dirname + '/**/*.php',
       // __dirname + '/**/*.twig'
     ]),
     // legacy({
@@ -21,18 +20,22 @@ export default defineConfig({
     // }),
   ],
   base:
-    process.env.APP_ENV === "development"
+    process.env.APP_ENV === 'development'
       ? `/wp-content/plugins/goodmotion-cookie-consent/admin-app`
       : `/wp-content/plugins/goodmotion-cookie-consent/admin-app/`,
-  root: "",
+  root: '',
+  // css: {
+  //   transformer: 'lightningcss',
+  // },
   build: {
+    cssMinify: 'lightningcss',
     // output dir for production build
-    outDir: resolve(__dirname, "dist"),
+    outDir: resolve(__dirname, 'dist'),
     emptyOutDir: true,
     manifest: true,
-    target: "es6",
+    // target: 'es6',
     rollupOptions: {
-      input: resolve(__dirname, "main.js"),
+      input: resolve(__dirname, 'src/main.js'),
     },
   },
   optimizeDeps: {
@@ -44,9 +47,9 @@ export default defineConfig({
     port: 7980,
     https: false,
     hmr: {
-      protocol: "ws",
+      protocol: 'ws',
       port: 7980,
       // host: 'localhost',
     },
   },
-});
+})

@@ -3,6 +3,7 @@
 namespace GoodmotionCookieConsent;
 
 require_once(dirname(__FILE__) . '/inc/load_assets.php');
+require_once(dirname(__FILE__) . '/inc/admin.php');
 
 use function GoodmotionCookieConsent\Inc\load_assets;
 
@@ -31,7 +32,22 @@ use function GoodmotionCookieConsent\Inc\load_assets;
 
 
 define('GOODMOTION_COOKIE_CONSENT_PATH', plugin_dir_path(__FILE__));
+
+define('GOODMOTION_COOKIE_CONSENT_ADMIN_DIR', 'admin-app');
+define('GOODMOTION_COOKIE_CONSENT_ADMIN_PATH', plugin_dir_path(__FILE__) . GOODMOTION_COOKIE_CONSENT_ADMIN_DIR);
+
 define('GOODMOTION_COOKIE_CONSENT_NAME', 'goodmotion-cookie-consent');
+
+/**
+ * init assets front
+ */
+load_assets(GOODMOTION_COOKIE_CONSENT_NAME, dirname(__FILE__) . '', '7979');
+
+/**
+ * init assets admin
+ */
+load_assets(GOODMOTION_COOKIE_CONSENT_NAME . '-admin', dirname(__FILE__) . '/admin-app', '7980', true);
+
 
 /**
  * Load the plugin text domain for translation.
@@ -45,19 +61,16 @@ define('GOODMOTION_COOKIE_CONSENT_NAME', 'goodmotion-cookie-consent');
     );
 }
 
+add_action('init', __NAMESPACE__ . '\load_textdomain');
+
 /**
  * load translations
  */
 function set_script_translations()
 {
-    wp_set_script_translations(GOODMOTION_COOKIE_CONSENT_NAME, GOODMOTION_COOKIE_CONSENT_NAME, plugin_dir_path(__FILE__) . 'languages');
+    // wp_set_script_translations(GOODMOTION_COOKIE_CONSENT_NAME . '-admin', GOODMOTION_COOKIE_CONSENT_NAME,  plugin_dir_path(__FILE__) . 'languages');
+    // set translation in js var
+    wp_localize_script(GOODMOTION_COOKIE_CONSENT_NAME . '-admin', 'goodmotionCookieConsent', include_once(dirname(__FILE__) . '/locale.php'));
 }
 
-add_action('init', __NAMESPACE__ . '\load_textdomain');
-add_action('init', __NAMESPACE__ . '\set_script_translations');
-
-
-/**
- * init assets front
- */
-load_assets(GOODMOTION_COOKIE_CONSENT_NAME, dirname(__FILE__) . '', '7979');
+add_action('admin_enqueue_scripts', __NAMESPACE__ . '\set_script_translations', 100);

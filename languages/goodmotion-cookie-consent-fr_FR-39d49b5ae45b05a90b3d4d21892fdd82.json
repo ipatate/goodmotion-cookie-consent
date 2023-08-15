@@ -1,0 +1,18 @@
+{
+    "translation-revision-date": "2023-08-14 15:48+0000",
+    "generator": "Loco https:\/\/localise.biz\/",
+    "source": "admin-app\/src\/main.js",
+    "domain": "goodmotion-cookie-consent",
+    "locale_data": {
+        "goodmotion-cookie-consent": {
+            "": {
+                "domain": "goodmotion-cookie-consent",
+                "lang": "fr_FR",
+                "plural-forms": "nplurals=2; plural=n > 1;"
+            },
+            "default": [
+                "test"
+            ]
+        }
+    }
+}
