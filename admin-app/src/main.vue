@@ -11,10 +11,14 @@
         <Tab class="tabbutton">
           {{ __('tab.settings') }}
         </Tab>
+        <Tab class="tabbutton">
+          {{ __('tab.scripts') }}
+        </Tab>
       </TabList>
       <TabPanels class="px-5 bg-white shadow">
         <TabPanel class="tabpanel"><Layout /></TabPanel>
-        <TabPanel class="tabpanel">Content 2</TabPanel>
+        <TabPanel class="tabpanel"><Settings /></TabPanel>
+        <TabPanel class="tabpanel">Content 3</TabPanel>
       </TabPanels>
     </TabGroup>
     <div class="py-2"></div>
@@ -31,9 +35,10 @@
 <script setup>
 import { useMainStore } from './stores'
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
+import Loader from './components/Loader.vue'
 import Alert from './components/Alert.vue'
 import Layout from './components/Layout.vue'
-import Loader from './components/Loader.vue'
+import Settings from './components/Settings.vue'
 const store = useMainStore()
 </script>
 

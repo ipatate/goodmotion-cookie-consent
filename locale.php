@@ -16,6 +16,12 @@ return [
   'label.settings.transition' => [__('label.settings.transition', 'goodmotion-cookie-consent')],
   'tab.layout' => [__('tab.layout', 'goodmotion-cookie-consent')],
   'tab.settings' => [__('tab.settings', 'goodmotion-cookie-consent')],
+  'tab.scripts' => [__('tab.scripts', 'goodmotion-cookie-consent')],
   'Saved with success' => [__('Saved with success', 'goodmotion-cookie-consent')],
   'Error on save process !' => [__('Error on save process !', 'goodmotion-cookie-consent')],
+  'label.cookieExpiration' => [__('label.cookieExpiration', 'goodmotion-cookie-consent')],
+  'Number of days before the cookie expires (182 days = 6 months)' => [__('Number of days before the cookie expires (182 days = 6 months)', 'goodmotion-cookie-consent')],
+  'label.globalSettings' => [__('label.globalSettings', 'goodmotion-cookie-consent')],
+  'label.cookieName' => [__('label.cookieName', 'goodmotion-cookie-consent')],
+  'Name of the cookie set by the plugin' => [__('Name of the cookie set by the plugin', 'goodmotion-cookie-consent')],
 ];

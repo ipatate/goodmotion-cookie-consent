@@ -37,14 +37,19 @@ export const useMainStore = defineStore('main', () => {
   })
 
   const layout = ref(null)
+  const settings = ref(null)
 
   /**
    * fetch data on load
    */
   onMounted(async () => {
     loading.value = true
-    const { value } = await fetchAPI({ action: 'get_gcc_layout' })
-    layout.value = value ? value : {}
+    const { value: layoutValue } = await fetchAPI({ action: 'get_gcc_layout' })
+    const { value: settingsValue } = await fetchAPI({
+      action: 'get_gcc_settings',
+    })
+    layout.value = layoutValue ? layoutValue : {}
+    settings.value = settingsValue ? settingsValue : {}
     loading.value = false
   })
 
@@ -75,6 +80,7 @@ export const useMainStore = defineStore('main', () => {
     loading,
     message,
     layout,
+    settings,
     saveValues,
   }
 })
