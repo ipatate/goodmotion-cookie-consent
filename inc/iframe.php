@@ -1,6 +1,6 @@
 <?php
 
-namespace PressWind\Inc;
+namespace GoodmotionCookieConsent\Inc;
 
 
 function parse($string)
@@ -29,20 +29,24 @@ function parseIframe(\DOMXpath $xpath): void
   $containers = $xpath->query("//div[contains(@class, 'wp-block-embed__wrapper')]");
   foreach ($containers as $key => $container) {
     [$iframe] = $xpath->query("//iframe", $container);
-
-    $_class = $container->getAttribute('class');
-
-    // remplace iframe
-    $fragment = $container->ownerDocument->createDocumentFragment();
-
-    $clone = $container->cloneNode(); // Get element copy without children
-    $clone->appendChild($fragment);
-    $container->parentNode->replaceChild($clone, $container);
     if ($iframe) {
-      // switch src to data-src
       $src = $iframe->getAttribute('src');
-      $iframe->setAttribute('data-src', $src);
-      $iframe->removeAttribute('src');
+      $allow = $iframe->getAttribute('allow');
+      $allowfullscreen = $iframe->getAttribute('allowfullscreen');
+      $frameborder = $iframe->getAttribute('frameborder');
+
+      $div = $container->ownerDocument->createElement('div');
+      $div->setAttribute('data-id', $src);
+      $div->setAttribute('data-service', 'video');
+      $div->setAttribute('data-allow', $allow);
+      if ($allowfullscreen) {
+        $div->setAttribute('data-allowfullscreen', $allowfullscreen);
+      }
+      if ($frameborder) {
+        $div->setAttribute('data-frameborder', $frameborder);
+      }
+      $div->setAttribute('data-autoscale', '');
+      $container->parentNode->replaceChild($div, $container);
     }
   }
 }
@@ -52,6 +56,6 @@ function parseIframe(\DOMXpath $xpath): void
 /**
  * filter the content
  */
-// add_filter('the_content', function ($content) {
-//   return namespace\parse($content);
-// });
+add_filter('the_content', function ($content) {
+  return namespace\parse($content);
+});

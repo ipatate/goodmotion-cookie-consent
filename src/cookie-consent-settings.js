@@ -37,20 +37,21 @@ const finalSettings = window.goodmotionCookieConsentSettings
 
 // iframemanager
 manager.run({
-  currLang: 'default',
+  currLang: 'en',
   services: {
-    youtube: {
+    video: {
       embedUrl: '{data-id}',
       // thumbnailUrl: 'https://i3.ytimg.com/vi/{data-id}/hqdefault.jpg',
       iframe: {
         allow:
-          'accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen;',
+          'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture',
+        frameBorder: 0,
       },
       // cookie: {
       //   name: 'cc_youtube',
       // },
       languages: {
-        default: {
+        en: {
           notice:
             'This content is hosted by a third party. By showing the external content you accept the <a rel="noreferrer" href="https://www.youtube.com/t/terms" title="Terms and conditions" target="_blank">terms and conditions</a> of youtube.com.',
           loadBtn: 'Load video',
@@ -101,6 +102,7 @@ cc.run({
   onAccept: function () {
     console.log('onAccept fired!')
 
+    console.log('iframemanager: removing all iframes')
     // If analytics category is disabled => load all iframes automatically
     if (cc.allowedCategory('analytics')) {
       console.log('iframemanager: loading all iframes')

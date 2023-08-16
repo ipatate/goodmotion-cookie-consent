@@ -7,6 +7,7 @@ require_once(dirname(__FILE__) . '/inc/admin.php');
 require_once(dirname(__FILE__) . '/inc/api.php');
 require_once(dirname(__FILE__) . '/inc/load_config.php');
 require_once(dirname(__FILE__) . '/inc/i18n.php');
+require_once(dirname(__FILE__) . '/inc/iframe.php');
 
 use function GoodmotionCookieConsent\Inc\load_assets;
 

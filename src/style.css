@@ -1,1 +1,2 @@
-@import "vanilla-cookieconsent/dist/cookieconsent.css";
+@import 'vanilla-cookieconsent/dist/cookieconsent.css';
+@import '@orestbida/iframemanager/dist/iframemanager.css';
