@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
-import { onMounted, ref } from 'vue'
+import { getCurrentInstance, onMounted, ref } from 'vue'
+import { __ } from '@wordpress/i18n'
 
 /**
  *
@@ -20,8 +21,8 @@ const fetchAPI = async ({ data, action } = { action: null }) => {
       credentials: 'same-origin',
       body: dataToSend,
     })
-    const response = await call.text()
-    return JSON.parse(response.replace(/\\"/g, '"'))
+    const { data } = await call.json()
+    return data ? data : {}
   } catch (error) {
     console.log(error)
   }
@@ -42,8 +43,8 @@ export const useMainStore = defineStore('main', () => {
    */
   onMounted(async () => {
     loading.value = true
-    const layout = await fetchAPI({ action: 'get_gcc_layout' })
-    layout.value = layout
+    const { value } = await fetchAPI({ action: 'get_gcc_layout' })
+    layout.value = value ? value : {}
     loading.value = false
   })
 
@@ -61,11 +62,11 @@ export const useMainStore = defineStore('main', () => {
     } catch (error) {
       console.log(error)
       loading.value = false
-      message.value.error = 'Error'
+      message.value.error = __('Error on save process !')
       return false
     }
-    message.value.success = 'Saved'
-    layout.value = res
+    message.value.success = __('Saved with success')
+    layout.value = res.value
     loading.value = false
     return true
   }

@@ -39,6 +39,8 @@ define('GOODMOTION_COOKIE_CONSENT_ADMIN_PATH', plugin_dir_path(__FILE__) . GOODM
 
 define('GOODMOTION_COOKIE_CONSENT_NAME', 'goodmotion-cookie-consent');
 
+define('GOODMOTION_COOKIE_CONSENT_PREFIX', 'goodmotion-cookie-consent_');
+
 /**
  * init assets front
  */
@@ -75,3 +77,14 @@ function set_script_translations()
 }
 
 add_action('admin_enqueue_scripts', __NAMESPACE__ . '\set_script_translations', 100);
+
+
+add_action('wp_head', function () {
+  echo '<!-- Google tag (gtag.js) --><script type="text/plain" data-cookiecategory="analytics" src="https://www.googletagmanager.com/gtag/js?id=G-JWXD5NGD0J"></script>
+<script type="text/plain" data-cookiecategory="analytics">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(\'js\', new Date());
+  gtag(\'config\', \'G-JWXD5NGD0J\');
+</script>';
+});

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Goodmotion Cookie Consent\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-14 15:13+0000\n"
-"PO-Revision-Date: 2023-08-14 19:50+0000\n"
+"PO-Revision-Date: 2023-08-15 16:30+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -19,6 +19,10 @@ msgstr ""
 #| msgid "button_save"
 msgid "button.save"
 msgstr "sauver"
+
+#: admin-app/src/stores/index.js:65
+msgid "Error on save process !"
+msgstr ""
 
 #. Description of the plugin
 #. URI of the plugin
@@ -42,14 +46,18 @@ msgid "label.consent"
 msgstr "Consent modal"
 
 #: locale.php:8
+msgid "label.consent.layout"
+msgstr ""
+
+#: locale.php:9
 msgid "label.consent.position1"
 msgstr "Consent modal vertical position"
 
-#: locale.php:9
+#: locale.php:10
 msgid "label.consent.position2"
 msgstr "Consent modal horizontal position"
 
-#: locale.php:10
+#: locale.php:11
 msgid "label.consent.transition"
 msgstr "Consent modal transition"
 
@@ -57,19 +65,23 @@ msgstr "Consent modal transition"
 msgid "label.modal.layout"
 msgstr "Consent modal Layout"
 
-#: locale.php:11
+#: locale.php:12
 msgid "label.settings"
 msgstr "Settings modal"
 
-#: locale.php:12
+#: locale.php:13
+msgid "label.settings.layout"
+msgstr ""
+
+#: locale.php:14
 msgid "label.settings.position1"
 msgstr "Settings modal vertical position"
 
-#: locale.php:13
+#: locale.php:15
 msgid "label.settings.position2"
 msgstr "Settings modal horizontal position"
 
-#: locale.php:14
+#: locale.php:16
 msgid "label.settings.transition"
 msgstr "Settings modal transition"
 
@@ -78,10 +90,14 @@ msgstr "Settings modal transition"
 msgid "main.title"
 msgstr "Paramètres Cookie consent"
 
-#: locale.php:15
+#: admin-app/src/stores/index.js:71
+msgid "Saved with success"
+msgstr "Sauvegarde réussie !"
+
+#: locale.php:17
 msgid "tab.layout"
 msgstr "Layout"
 
-#: locale.php:16
+#: locale.php:18
 msgid "tab.settings"
 msgstr "Settings"

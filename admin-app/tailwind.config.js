@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  preflight: false,
+  corePlugins: {
+    preflight: false,
+  },
   // prefix: 'gcc-',
   content: ['./src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Goodmotion Cookie Consent\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-14 15:34+0000\n"
+"POT-Creation-Date: 2023-08-15 16:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Domain: goodmotion-cookie-consent"
 
 #: locale.php:5
-msgid "button_save"
+msgid "button.save"
 msgstr ""
 
 #. Description of the plugin
@@ -37,6 +37,58 @@ msgstr ""
 msgid "https://goodmotion.fr"
 msgstr ""
 
+#: locale.php:7
+msgid "label.consent"
+msgstr ""
+
+#: locale.php:8
+msgid "label.consent.layout"
+msgstr ""
+
+#: locale.php:9
+msgid "label.consent.position1"
+msgstr ""
+
+#: locale.php:10
+msgid "label.consent.position2"
+msgstr ""
+
+#: locale.php:11
+msgid "label.consent.transition"
+msgstr ""
+
+#: locale.php:6
+msgid "label.modal.layout"
+msgstr ""
+
+#: locale.php:12
+msgid "label.settings"
+msgstr ""
+
+#: locale.php:13
+msgid "label.settings.layout"
+msgstr ""
+
+#: locale.php:14
+msgid "label.settings.position1"
+msgstr ""
+
+#: locale.php:15
+msgid "label.settings.position2"
+msgstr ""
+
+#: locale.php:16
+msgid "label.settings.transition"
+msgstr ""
+
 #: locale.php:4
-msgid "main_title"
+msgid "main.title"
+msgstr ""
+
+#: locale.php:17
+msgid "tab.layout"
+msgstr ""
+
+#: locale.php:18
+msgid "tab.settings"
 msgstr ""

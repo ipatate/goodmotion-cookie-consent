@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-2 py-16 gm-admin_panel sm:px-0">
+  <div class="w-11/12 py-10 gm-admin_panel sm:px-0">
     <h1 class="pb-5 text-2xl">{{ __('main.title') }}</h1>
     <Alert />
     <div class="py-2"></div>
@@ -12,11 +12,14 @@
           {{ __('tab.settings') }}
         </Tab>
       </TabList>
-      <TabPanels class="border-t border-solid border-slate-600">
+      <TabPanels
+        class="border-t border-b-0 border-l-0 border-r-0 border-solid border-slate-600"
+      >
         <TabPanel class="tabpanel"><Layout /></TabPanel>
         <TabPanel class="tabpanel">Content 2</TabPanel>
       </TabPanels>
     </TabGroup>
+    <Alert />
     <div
       v-show="store.loading === true"
       class="absolute inset-0 flex items-center justify-center bg-slate-600/0"

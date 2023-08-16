@@ -4,7 +4,7 @@
     submit-label="settings"
     @submit="submitHandler"
     :actions="false"
-    :values="store.layout"
+    v-model="store.layout"
   >
     <fieldset>
       <legend>{{ __('label.consent') }}</legend>
