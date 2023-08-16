@@ -1,10 +1,13 @@
 <template>
   <div class="w-full py-10 pr-10 gm-admin_panel sm:px-0">
-    <h1 class="pb-5 text-2xl">{{ __('main.title') }}</h1>
+    <h1 class="flex flex-wrap items-center pb-5 text-2xl gap-x-2">
+      <Cookie />
+      {{ __('main.title') }}
+    </h1>
     <Alert />
     <div class="py-2"></div>
     <TabGroup>
-      <TabList class="flex">
+      <TabList class="flex gap-x-1">
         <Tab class="tabbutton">
           {{ __('tab.layout') }}
         </Tab>
@@ -37,6 +40,7 @@ import { useMainStore } from './stores'
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
 import Loader from './components/Loader.vue'
 import Alert from './components/Alert.vue'
+import Cookie from './components/icons/Cookie.vue'
 import Layout from './components/Layout.vue'
 import Settings from './components/Settings.vue'
 const store = useMainStore()
@@ -44,11 +48,12 @@ const store = useMainStore()
 
 <style scoped>
 .tabbutton {
-  @apply p-2.5 text-sm leading-5 text-gray-500  focus:outline-none min-w-[5rem]  md:min-w-[10rem] border-0 font-normal bg-slate-100/60;
+  @apply p-2.5 text-sm leading-5 text-gray-700  focus:outline-none min-w-[5rem]  md:min-w-[10rem] border-0 font-normal bg-transparent;
 }
 
 .tabbutton[data-headlessui-state='selected'] {
-  @apply text-gray-900 bg-white font-semibold;
+  @apply text-gray-900 bg-white font-semibold border-t-4 border-solid border-primary;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.04);
 }
 
 .tabpanel {

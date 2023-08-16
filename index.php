@@ -5,6 +5,8 @@ namespace GoodmotionCookieConsent;
 require_once(dirname(__FILE__) . '/inc/load_assets.php');
 require_once(dirname(__FILE__) . '/inc/admin.php');
 require_once(dirname(__FILE__) . '/inc/api.php');
+require_once(dirname(__FILE__) . '/inc/load_config.php');
+require_once(dirname(__FILE__) . '/inc/i18n.php');
 
 use function GoodmotionCookieConsent\Inc\load_assets;
 

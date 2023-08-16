@@ -17,14 +17,14 @@
       <div class="flex flex-wrap gap-3">
         <FormKit
           type="select"
-          :label="__('label.consent.position1')"
-          name="consentPosition1"
+          :label="__('label.consent.positionX')"
+          name="consentPositionX"
           :options="['bottom', 'middle', 'top']"
         />
         <FormKit
           type="select"
-          :label="__('label.consent.position2')"
-          name="consentPosition2"
+          :label="__('label.consent.positionY')"
+          name="consentPositionY"
           :options="['left', 'right', 'center']"
         />
       </div>
@@ -47,14 +47,14 @@
       <div class="flex flex-wrap gap-3">
         <FormKit
           type="select"
-          :label="__('label.settings.position1')"
-          name="settingsPosition1"
+          :label="__('label.settings.positionX')"
+          name="settingsPositionX"
           :options="['bottom', 'middle', 'top']"
         />
         <FormKit
           type="select"
-          :label="__('label.settings.position2')"
-          name="settingsPosition2"
+          :label="__('label.settings.positionY')"
+          name="settingsPositionY"
           :options="['left', 'right', 'center']"
         />
       </div>
