@@ -4,16 +4,16 @@ namespace GoodmotionCookieConsent\Inc;
 
 function gcc_value($key)
 {
-  $data = get_option($key);
+  $data = get_option(GOODMOTION_COOKIE_CONSENT_PREFIX . $key);
   if (!$data) return null;
-  $decoded = json_decode(str_replace('\\', '', $data),);
-  return $decoded->value;
+  // $decoded = json_decode(str_replace('\\', '', $data),);
+  return $data->value;
 }
 
 
 function options_page()
 {
-  echo '<div id="gm-admin-app"></div>';
+  echo '<div id="gm-admin-app" style="padding-right: 20px;"></div>';
 }
 
 

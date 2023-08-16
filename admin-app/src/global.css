@@ -4,6 +4,8 @@
 
 /** global page */
 body.settings_page_goodmotion-cookie-consent #wpcontent {
+  --fk-bg-submit: #62929a;
+  --fk-bg-submit-hover: #4c6e76;
   @apply bg-secondary text-typo;
 }
 
@@ -17,7 +19,7 @@ body.settings_page_goodmotion-cookie-consent #wpcontent {
 }
 
 .gm-admin_panel legend {
-  @apply pb-4 pl-0 text-2xl font-semibold;
+  @apply pb-1 pl-0 text-xl font-semibold;
 }
 
 .gm-admin_panel select {

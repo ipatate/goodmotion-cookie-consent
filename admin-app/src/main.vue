@@ -1,5 +1,5 @@
 <template>
-  <div class="w-11/12 py-10 gm-admin_panel sm:px-0">
+  <div class="w-full py-10 pr-10 gm-admin_panel sm:px-0">
     <h1 class="pb-5 text-2xl">{{ __('main.title') }}</h1>
     <Alert />
     <div class="py-2"></div>
@@ -12,19 +12,18 @@
           {{ __('tab.settings') }}
         </Tab>
       </TabList>
-      <TabPanels
-        class="border-t border-b-0 border-l-0 border-r-0 border-solid border-slate-600"
-      >
+      <TabPanels class="px-5 bg-white shadow">
         <TabPanel class="tabpanel"><Layout /></TabPanel>
         <TabPanel class="tabpanel">Content 2</TabPanel>
       </TabPanels>
     </TabGroup>
+    <div class="py-2"></div>
     <Alert />
     <div
       v-show="store.loading === true"
-      class="absolute inset-0 flex items-center justify-center bg-slate-600/0"
+      class="absolute inset-0 flex items-center justify-center bg-white/5"
     >
-      <Loader />
+      <Loader class="text-primary" />
     </div>
   </div>
 </template>
@@ -40,15 +39,11 @@ const store = useMainStore()
 
 <style scoped>
 .tabbutton {
-  @apply p-2.5 text-sm leading-5 text-gray-600  focus:outline-none bg-slate-100 min-w-[10rem] border border-solid border-slate-500 border-r-0 border-b-0 font-light;
-}
-
-.tabbutton:last-child {
-  @apply border-r;
+  @apply p-2.5 text-sm leading-5 text-gray-500  focus:outline-none min-w-[5rem]  md:min-w-[10rem] border-0 font-normal bg-slate-100/60;
 }
 
 .tabbutton[data-headlessui-state='selected'] {
-  @apply text-slate-800 bg-slate-300 font-medium;
+  @apply text-gray-900 bg-white font-semibold;
 }
 
 .tabpanel {

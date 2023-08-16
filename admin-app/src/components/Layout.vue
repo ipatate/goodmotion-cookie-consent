@@ -35,7 +35,7 @@
         :options="['slide', 'zoom']"
       />
     </fieldset>
-    <hr class="my-4" />
+    <span class="block mt-4 mb-6 border border-solid border-primary" />
     <fieldset>
       <legend>{{ __('label.settings') }}</legend>
       <FormKit
