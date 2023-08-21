@@ -64,7 +64,7 @@ manager.run({
 
 // cookieconsent
 cc.run({
-  current_lang: 'default',
+  current_lang: 'en',
   autoclear_cookies: true, // default: false
   cookie_name: finalSettings.settings.cookieName,
   cookie_expiration: finalSettings.settings.cookieExpiration,
@@ -89,7 +89,7 @@ cc.run({
     },
   },
   languages: {
-    default: {
+    en: {
       consent_modal: window.goodmotionCookieConsentLocales.consent_modal,
       settings_modal: window.goodmotionCookieConsentLocales.settings_modal,
     },
