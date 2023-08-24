@@ -1,12 +1,13 @@
 <?php
 
 namespace GoodmotionCookieConsent;
-
+// assets
 require_once(dirname(__FILE__) . '/inc/load_assets.php');
+//
 require_once(dirname(__FILE__) . '/inc/admin.php');
 require_once(dirname(__FILE__) . '/inc/api.php');
 require_once(dirname(__FILE__) . '/inc/load_config.php');
-require_once(dirname(__FILE__) . '/inc/i18n.php');
+require_once(dirname(__FILE__) . '/inc/settings.php');
 require_once(dirname(__FILE__) . '/inc/iframe.php');
 
 use function GoodmotionCookieConsent\Inc\load_assets;
@@ -86,12 +87,32 @@ function set_script_translations()
 add_action('admin_enqueue_scripts', __NAMESPACE__ . '\set_script_translations', 100);
 
 
+// add_action('wp_head', function () {
+//   echo '<!-- Google tag (gtag.js) --><script type="text/plain" data-cookiecategory="analytics" src="https://www.googletagmanager.com/gtag/js?id=G-JWXD5NGD0J"></script>
+// <script type="text/plain" data-cookiecategory="analytics">
+//   window.dataLayer = window.dataLayer || [];
+//   function gtag(){dataLayer.push(arguments);}
+//   gtag(\'js\', new Date());
+//   gtag(\'config\', \'G-JWXD5NGD0J\');
+// </script>';
+// });
+
 add_action('wp_head', function () {
-  echo '<!-- Google tag (gtag.js) --><script type="text/plain" data-cookiecategory="analytics" src="https://www.googletagmanager.com/gtag/js?id=G-JWXD5NGD0J"></script>
-<script type="text/plain" data-cookiecategory="analytics">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag(\'js\', new Date());
-  gtag(\'config\', \'G-JWXD5NGD0J\');
-</script>';
+  echo '<script type="text/javascript">
+_linkedin_partner_id = "4760529";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function(l) {
+if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+window.lintrk.q=[]}
+var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})(window.lintrk);
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=4760529&fmt=gif" />
+</noscript>';
 });

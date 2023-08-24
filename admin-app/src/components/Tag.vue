@@ -13,6 +13,12 @@
       :actions="false"
       v-model="store.scripts[slug]"
     >
+      <FormKit
+        type="hidden"
+        name="type"
+        value="analytics"
+        :value="store.scripts[slug].activated"
+      />
       <label class="flex items-center gap-2">
         <FormKit type="checkbox" name="activated" />
         <legend class="mb-3">{{ name }}</legend>

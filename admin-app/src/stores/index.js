@@ -29,6 +29,7 @@ const fetchAPI = async ({ data, action } = { action: null }) => {
 }
 
 export const useMainStore = defineStore('main', () => {
+  const iframeOptions = ['youtube', 'vimeo']
   const scriptTags = {
     GA: {
       name: 'Google Analytics',
@@ -42,6 +43,10 @@ export const useMainStore = defineStore('main', () => {
       name: 'Facebook Pixel',
       slug: 'facebook_pixel',
     },
+    // Linkedin: {
+    //   name: 'Linkedin',
+    //   slug: 'linkedin',
+    // },
   }
 
   const loading = ref(false)
@@ -112,5 +117,6 @@ export const useMainStore = defineStore('main', () => {
     scripts,
     scriptTags,
     saveValues,
+    iframeOptions,
   }
 })

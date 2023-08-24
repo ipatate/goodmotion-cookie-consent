@@ -24,6 +24,10 @@
         name="cookieName"
       />
     </fieldset>
+    <fieldset>
+      <legend>{{ __('label.iframeSettings') }}</legend>
+      <FormKit type="checkbox" name="iframes" :options="store.iframeOptions" />
+    </fieldset>
     <FormKit
       type="submit"
       :disabled="store.loading"

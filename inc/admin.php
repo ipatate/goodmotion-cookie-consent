@@ -6,7 +6,6 @@ function gcc_value($key)
 {
   $data = get_option(GOODMOTION_COOKIE_CONSENT_PREFIX . $key);
   if (!$data) return null;
-  // $decoded = json_decode(str_replace('\\', '', $data),);
   return $data->value;
 }
 
