@@ -24,4 +24,8 @@ return [
   'label.globalSettings' => [__('label.globalSettings', 'goodmotion-cookie-consent')],
   'label.cookieName' => [__('label.cookieName', 'goodmotion-cookie-consent')],
   'Name of the cookie set by the plugin' => [__('Name of the cookie set by the plugin', 'goodmotion-cookie-consent')],
+  'script.id' => [__('script.id', 'goodmotion-cookie-consent')],
+  'script.id_help' => [__('script.id_help', 'goodmotion-cookie-consent')],
+  'script.content' => [__('script.content', 'goodmotion-cookie-consent')],
+  'script.content_help' => [__('script.content_help', 'goodmotion-cookie-consent')],
 ];

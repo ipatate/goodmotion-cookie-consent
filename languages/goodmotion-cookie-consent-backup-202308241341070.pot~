@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Goodmotion Cookie Consent\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-24 13:41+0000\n"
+"POT-Creation-Date: 2023-08-15 16:30+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid "button.save"
 msgstr ""
 
-#: locale.php:21
+#: admin-app/src/stores/index.js:65
 msgid "Error on save process !"
 msgstr ""
 
@@ -50,27 +50,15 @@ msgid "label.consent.layout"
 msgstr ""
 
 #: locale.php:9
-msgid "label.consent.positionX"
+msgid "label.consent.position1"
 msgstr ""
 
 #: locale.php:10
-msgid "label.consent.positionY"
+msgid "label.consent.position2"
 msgstr ""
 
 #: locale.php:11
 msgid "label.consent.transition"
-msgstr ""
-
-#: locale.php:22
-msgid "label.cookieExpiration"
-msgstr ""
-
-#: locale.php:25
-msgid "label.cookieName"
-msgstr ""
-
-#: locale.php:24
-msgid "label.globalSettings"
 msgstr ""
 
 #: locale.php:6
@@ -86,11 +74,11 @@ msgid "label.settings.layout"
 msgstr ""
 
 #: locale.php:14
-msgid "label.settings.positionX"
+msgid "label.settings.position1"
 msgstr ""
 
 #: locale.php:15
-msgid "label.settings.positionY"
+msgid "label.settings.position2"
 msgstr ""
 
 #: locale.php:16
@@ -101,40 +89,12 @@ msgstr ""
 msgid "main.title"
 msgstr ""
 
-#: locale.php:26
-msgid "Name of the cookie set by the plugin"
-msgstr ""
-
-#: locale.php:23
-msgid "Number of days before the cookie expires (182 days = 6 months)"
-msgstr ""
-
-#: locale.php:20
+#: admin-app/src/stores/index.js:71
 msgid "Saved with success"
-msgstr ""
-
-#: locale.php:29
-msgid "script.content"
-msgstr ""
-
-#: locale.php:30
-msgid "script.content_help"
-msgstr ""
-
-#: locale.php:27
-msgid "script.id"
-msgstr ""
-
-#: locale.php:28
-msgid "script.id_help"
 msgstr ""
 
 #: locale.php:17
 msgid "tab.layout"
-msgstr ""
-
-#: locale.php:19
-msgid "tab.scripts"
 msgstr ""
 
 #: locale.php:18

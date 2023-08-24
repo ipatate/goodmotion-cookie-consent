@@ -44,3 +44,11 @@ add_action('wp_ajax_save_gcc_settings', function () {
 add_action('wp_ajax_get_gcc_settings', function () {
   namespace\get_gcc('settings');
 });
+
+add_action('wp_ajax_save_gcc_scripts', function () {
+  namespace\save_gcc('scripts');
+});
+
+add_action('wp_ajax_get_gcc_scripts', function () {
+  namespace\get_gcc('scripts');
+});

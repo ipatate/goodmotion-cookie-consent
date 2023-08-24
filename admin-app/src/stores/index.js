@@ -29,6 +29,21 @@ const fetchAPI = async ({ data, action } = { action: null }) => {
 }
 
 export const useMainStore = defineStore('main', () => {
+  const scriptTags = {
+    GA: {
+      name: 'Google Analytics',
+      slug: 'google_analytics',
+    },
+    GTM: {
+      name: 'Google Tag Manager',
+      slug: 'google_tag_manager',
+    },
+    FB: {
+      name: 'Facebook Pixel',
+      slug: 'facebook_pixel',
+    },
+  }
+
   const loading = ref(false)
 
   const message = ref({
@@ -38,6 +53,7 @@ export const useMainStore = defineStore('main', () => {
 
   const layout = ref(null)
   const settings = ref(null)
+  const scripts = ref({})
 
   /**
    * fetch data on load
@@ -48,9 +64,21 @@ export const useMainStore = defineStore('main', () => {
     const { value: settingsValue } = await fetchAPI({
       action: 'get_gcc_settings',
     })
+    const { value: scriptsValue } = await fetchAPI({
+      action: 'get_gcc_scripts',
+    })
     layout.value = layoutValue ? layoutValue : {}
     settings.value = settingsValue ? settingsValue : {}
+    scripts.value = scriptsValue ? scriptsValue : {}
     loading.value = false
+
+    Object.keys(scriptTags).forEach((key) => {
+      const slug = scriptTags[key].slug
+      if (!scripts.value[slug]) {
+        scripts.value[slug] = {}
+        scripts.value[slug].activated = false
+      }
+    })
   })
 
   const saveValues = async (action, value) => {
@@ -81,6 +109,8 @@ export const useMainStore = defineStore('main', () => {
     message,
     layout,
     settings,
+    scripts,
+    scriptTags,
     saveValues,
   }
 })

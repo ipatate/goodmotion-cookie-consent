@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Goodmotion Cookie Consent\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-14 15:13+0000\n"
-"PO-Revision-Date: 2023-08-24 13:44+0000\n"
+"PO-Revision-Date: 2023-08-16 10:30+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid "button.save"
 msgstr "sauver"
 
-#: locale.php:21
+#: admin-app/src/stores/index.js:65
 msgid "Error on save process !"
 msgstr "Erreur lors de la sauvegarde !"
 
@@ -50,32 +50,16 @@ msgid "label.consent.layout"
 msgstr "Consent"
 
 #: locale.php:9
-#, fuzzy
-#| msgid "label.consent.position1"
-msgid "label.consent.positionX"
+msgid "label.consent.position1"
 msgstr "Consent modal vertical position"
 
 #: locale.php:10
-#, fuzzy
-#| msgid "label.consent.position2"
-msgid "label.consent.positionY"
+msgid "label.consent.position2"
 msgstr "Consent modal horizontal position"
 
 #: locale.php:11
 msgid "label.consent.transition"
 msgstr "Consent modal transition"
-
-#: locale.php:22
-msgid "label.cookieExpiration"
-msgstr "Cookie expiration"
-
-#: locale.php:25
-msgid "label.cookieName"
-msgstr "Cookie name"
-
-#: locale.php:24
-msgid "label.globalSettings"
-msgstr "Global Settings"
 
 #: locale.php:6
 msgid "label.modal.layout"
@@ -90,15 +74,11 @@ msgid "label.settings.layout"
 msgstr "Settings"
 
 #: locale.php:14
-#, fuzzy
-#| msgid "label.settings.position1"
-msgid "label.settings.positionX"
+msgid "label.settings.position1"
 msgstr "Settings modal vertical position"
 
 #: locale.php:15
-#, fuzzy
-#| msgid "label.settings.position2"
-msgid "label.settings.positionY"
+msgid "label.settings.position2"
 msgstr "Settings modal horizontal position"
 
 #: locale.php:16
@@ -110,43 +90,13 @@ msgstr "Settings modal transition"
 msgid "main.title"
 msgstr "Paramètres Cookie consent"
 
-#: locale.php:26
-msgid "Name of the cookie set by the plugin"
-msgstr "Name of the cookie set by the plugin"
-
-#: locale.php:23
-msgid "Number of days before the cookie expires (182 days = 6 months)"
-msgstr "Number of days before the cookie expires (182 days = 6 months)"
-
-#: locale.php:20
+#: admin-app/src/stores/index.js:71
 msgid "Saved with success"
 msgstr "Sauvegarde réussie !"
-
-#: locale.php:29
-msgid "script.content"
-msgstr "Script Template"
-
-#: locale.php:30
-msgid "script.content_help"
-msgstr "The script that will render on the page. Don't include <script> tags."
-
-#: locale.php:27
-msgid "script.id"
-msgstr "Tracking ID"
-
-#: locale.php:28
-msgid "script.id_help"
-msgstr ""
-"Only enter the ID, e.g.: G-XXXXXXXXXX or UA-XXXXXX-XX, not the entire script "
-"code"
 
 #: locale.php:17
 msgid "tab.layout"
 msgstr "Layout"
-
-#: locale.php:19
-msgid "tab.scripts"
-msgstr "Scripts Tags"
 
 #: locale.php:18
 msgid "tab.settings"

@@ -21,7 +21,9 @@
       <TabPanels class="px-5 bg-white shadow">
         <TabPanel class="tabpanel"><Layout /></TabPanel>
         <TabPanel class="tabpanel"><Settings /></TabPanel>
-        <TabPanel class="tabpanel">Content 3</TabPanel>
+        <TabPanel class="tabpanel">
+          <ScriptTags :scripts="store.scriptTags" />
+        </TabPanel>
       </TabPanels>
     </TabGroup>
     <div class="py-2"></div>
@@ -43,6 +45,7 @@ import Alert from './components/Alert.vue'
 import Cookie from './components/icons/Cookie.vue'
 import Layout from './components/Layout.vue'
 import Settings from './components/Settings.vue'
+import ScriptTags from './components/ScriptTags.vue'
 const store = useMainStore()
 </script>
 
