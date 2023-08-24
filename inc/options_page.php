@@ -1,13 +1,10 @@
 <?php
 
-namespace GoodmotionCookieConsent\Inc;
+/**
+ * admin page options for cookie consent
+ */
 
-function gcc_value($key)
-{
-  $data = get_option(GOODMOTION_COOKIE_CONSENT_PREFIX . $key);
-  if (!$data) return null;
-  return $data->value;
-}
+namespace GoodmotionCookieConsent\Inc;
 
 
 function options_page()

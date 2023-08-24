@@ -1,6 +1,20 @@
 <?php
 
+/**
+ * api for ajax request from app admin
+ */
+
 namespace GoodmotionCookieConsent\Inc;
+
+/**
+ * get value from db
+ */
+function gcc_value($key)
+{
+  $data = get_option(GOODMOTION_COOKIE_CONSENT_PREFIX . $key);
+  if (!$data) return null;
+  return $data->value;
+}
 
 
 /** save values */

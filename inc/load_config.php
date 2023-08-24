@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * create object settings variables for js cookie consent settings
+ * includes in page head
+ */
+
 namespace GoodmotionCookieConsent\Inc;
 
 /**

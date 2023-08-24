@@ -4,7 +4,7 @@ namespace GoodmotionCookieConsent;
 // assets
 require_once(dirname(__FILE__) . '/inc/load_assets.php');
 //
-require_once(dirname(__FILE__) . '/inc/admin.php');
+require_once(dirname(__FILE__) . '/inc/options_page.php');
 require_once(dirname(__FILE__) . '/inc/api.php');
 require_once(dirname(__FILE__) . '/inc/load_config.php');
 require_once(dirname(__FILE__) . '/inc/settings.php');

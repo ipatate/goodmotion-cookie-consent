@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * create object settings variables for js cookie consent
+ * includes in page head
+ */
+
 namespace GoodmotionCookieConsent\Inc;
 
 require dirname(__FILE__) . '/../services.php';

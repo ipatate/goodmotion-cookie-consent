@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * parse iframe element in content for replace by cookie consent system
+ */
+
 namespace GoodmotionCookieConsent\Inc;
 
 
