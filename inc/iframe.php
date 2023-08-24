@@ -28,6 +28,11 @@ function parse($string)
  */
 function parseIframe(\DOMXpath $xpath): void
 {
+  // iframes settings is not empty
+  $settings = namespace\gcc_value('settings');
+  $iframesSettings = $settings->iframes;
+  if (count($iframesSettings) === 0) return;
+
   $name = 'contentdisplay';
   // search wp-block-embed__wrapper in class
   $containers = $xpath->query("//div[contains(@class, 'wp-block-embed__wrapper')]");
@@ -35,6 +40,12 @@ function parseIframe(\DOMXpath $xpath): void
     [$iframe] = $xpath->query("//iframe", $container);
     if ($iframe) {
       $src = $iframe->getAttribute('src');
+      // if src contain service name from $iframes
+      $service = array_filter($iframesSettings, function ($item) use ($src) {
+        return strpos($src, $item) !== false;
+      });
+      if (count($service) === 0) continue;
+
       $allow = $iframe->getAttribute('allow');
       $allowfullscreen = $iframe->getAttribute('allowfullscreen');
       $frameborder = $iframe->getAttribute('frameborder');

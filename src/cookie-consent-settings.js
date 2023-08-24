@@ -1,15 +1,6 @@
 import 'vanilla-cookieconsent'
 import '@orestbida/iframemanager'
 
-// # TODO
-// gui option : layout, position, transition ok
-// cookie expiration ok
-// delay
-// add category
-// add service with category
-// link privacy policy
-// use revision id
-
 const manager = iframemanager()
 
 const cc = initCookieConsent()
@@ -51,16 +42,19 @@ manager.run({
       //   name: 'cc_youtube',
       // },
       languages: {
-        en: {
-          notice:
-            'This content is hosted by a third party. By showing the external content you accept the <a rel="noreferrer" href="https://www.youtube.com/t/terms" title="Terms and conditions" target="_blank">terms and conditions</a> of youtube.com.',
-          loadBtn: 'Load video',
-          loadAllBtn: "Don't ask again",
-        },
+        en: window.goodmotionCookieConsentLocales.iframe.video,
       },
     },
   },
 })
+
+const manageDisplay = (_cc) => {
+  if (_cc.allowedCategory('display')) {
+    manager.acceptService('all')
+  } else {
+    manager.rejectService('all')
+  }
+}
 
 // cookieconsent
 cc.run({
@@ -96,30 +90,14 @@ cc.run({
   },
 
   onFirstAction: function () {
-    console.log('onFirstAction fired')
+    manageDisplay(cc)
   },
 
   onAccept: function () {
-    console.log('onAccept fired!')
-
-    console.log('iframemanager: removing all iframes')
-    // If analytics category is disabled => load all iframes automatically
-    if (cc.allowedCategory('analytics')) {
-      console.log('iframemanager: loading all iframes')
-      manager.acceptService('all')
-    }
+    manageDisplay(cc)
   },
 
   onChange: function (cookie, changed_preferences) {
-    console.log('onChange fired!')
-
-    // If analytics category is disabled => ask for permission to load iframes
-    if (!cc.allowedCategory('analytics')) {
-      console.log('iframemanager: disabling all iframes')
-      manager.rejectService('all')
-    } else {
-      console.log('iframemanager: loading all iframes')
-      manager.acceptService('all')
-    }
+    manageDisplay(cc)
   },
 })

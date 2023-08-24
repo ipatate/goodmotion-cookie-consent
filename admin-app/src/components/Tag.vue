@@ -30,6 +30,7 @@
           :label="__('script.id') + ' ' + name"
           :help="__('script.id_help')"
           :disabled="!store.scripts[slug].activated"
+          :required="store.scripts[slug].activated"
         />
         <FormKit
           type="textarea"
@@ -41,7 +42,7 @@
         />
         <FormKit
           type="submit"
-          :disabled="store.loading || !store.scripts[slug].activated"
+          :disabled="store.loading"
           class="button button-primary"
           :label="__('button.save')"
         />
