@@ -14,7 +14,7 @@ function set_scripts()
           $str = "<!-- Google tag (gtag.js) --><script type=\"text/plain\" data-cookiecategory=\"{$value->type}\" src=\"https://www.googletagmanager.com/gtag/js?id={$value->id}\"></script>";
           $str .= "<script type=\"text/plain\" data-cookiecategory=\"{$value->type}\">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '{$value->id}');</script>";
 
-          if ($value->template) {
+          if (property_exists($value, 'template') &&  $value->template !== '') {
             $str .= "<script type=\"text/plain\" data-cookiecategory=\"{$value->type}\">";
             $str .= str_replace(['#id'], [$value->id], $value->template);
             $str .= "</script>";
@@ -32,7 +32,7 @@ function set_scripts()
           <!-- End Google Tag Manager -->";
 
 
-          if ($value->template) {
+          if (property_exists($value, 'template') &&  $value->template !== '') {
             $str .= "<script type=\"text/plain\" data-cookiecategory=\"{$value->type}\">";
             $str .= str_replace(['#id'], [$value->id], $value->template);
             $str .= "</script>";
@@ -58,13 +58,13 @@ function set_scripts()
             fbq('init', '{$value->id}');
             fbq('track', 'PageView');
             </script>
-            <noscript><img height=\"1\" width=\"1\" style=\"display:none\"
-            src=\"https://www.facebook.com/tr?id={$value->id}&ev=PageView&noscript=1\"
-            /></noscript>
             <!-- End Meta Pixel Code -->";
+          // <noscript><img height=\"1\" width=\"1\" style=\"display:none\"
+          // src=\"https://www.facebook.com/tr?id={$value->id}&ev=PageView&noscript=1\"
+          // /></noscript>
 
 
-          if ($value->template) {
+          if (property_exists($value, 'template') &&  $value->template !== '') {
             $str .= "<script type=\"text/plain\" data-cookiecategory=\"{$value->type}\">";
             $str .= str_replace(['#id'], [$value->id], $value->template);
             $str .= "</script>";
@@ -97,7 +97,7 @@ function set_scripts()
           // </noscript>
 
 
-          if ($value->template) {
+          if (property_exists($value, 'template') &&  $value->template !== '') {
             $str .= "<script type=\"text/plain\" data-cookiecategory=\"{$value->type}\">";
             $str .= str_replace(['#id'], [$value->id], $value->template);
             $str .= "</script>";
