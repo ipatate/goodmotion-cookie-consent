@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Goodmotion Cookie Consent\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-25 09:43+0000\n"
+"POT-Creation-Date: 2023-08-24 18:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -20,19 +20,19 @@ msgstr ""
 msgid "button.save"
 msgstr ""
 
-#: inc/settings.php:106
+#: inc/settings.php:101
 msgid "cc_block.analytics_description"
 msgstr ""
 
-#: inc/settings.php:105
+#: inc/settings.php:100
 msgid "cc_block.analytics_title"
 msgstr ""
 
-#: inc/settings.php:133
+#: inc/settings.php:128
 msgid "cc_block.display_description"
 msgstr ""
 
-#: inc/settings.php:132
+#: inc/settings.php:127
 msgid "cc_block.display_title"
 msgstr ""
 
@@ -49,15 +49,15 @@ msgstr ""
 msgid "cc_block.lkdin_description"
 msgstr ""
 
-#: inc/settings.php:91
+#: inc/settings.php:86
 msgid "cc_block.necessary_description"
 msgstr ""
 
-#: inc/settings.php:90
+#: inc/settings.php:85
 msgid "cc_block.necessary_title"
 msgstr ""
 
-#: inc/settings.php:87
+#: inc/settings.php:82
 msgid "cc_block.table_description"
 msgstr ""
 
@@ -65,71 +65,71 @@ msgstr ""
 msgid "cc_block.video_description"
 msgstr ""
 
-#: inc/settings.php:39
+#: inc/settings.php:34
 msgid "cc_consent.accept_btn"
 msgstr ""
 
-#: inc/settings.php:37
+#: inc/settings.php:32
 msgid "cc_consent.description"
 msgstr ""
 
-#: inc/settings.php:50
+#: inc/settings.php:45
 msgid "cc_consent.revision_message"
 msgstr ""
 
-#: inc/settings.php:43
+#: inc/settings.php:38
 msgid "cc_consent.settings_btn"
 msgstr ""
 
-#: inc/settings.php:35
+#: inc/settings.php:30
 msgid "cc_consent.title"
 msgstr ""
 
-#: inc/settings.php:165
+#: inc/settings.php:160
 msgid "cc_iframe.ask_btn"
 msgstr ""
 
-#: inc/settings.php:164
+#: inc/settings.php:159
 msgid "cc_iframe.load_btn"
 msgstr ""
 
-#: inc/settings.php:163
+#: inc/settings.php:158
 msgid "cc_iframe.video_notice"
 msgstr ""
 
-#: inc/settings.php:65
+#: inc/settings.php:60
 msgid "cc_settings.accept_all_btn"
 msgstr ""
 
-#: inc/settings.php:67
+#: inc/settings.php:62
 msgid "cc_settings.close_btn"
 msgstr ""
 
-#: inc/settings.php:73
+#: inc/settings.php:68
 msgid "cc_settings.col_domain"
 msgstr ""
 
-#: inc/settings.php:70
+#: inc/settings.php:65
 msgid "cc_settings.col_name"
 msgstr ""
 
-#: inc/settings.php:79
+#: inc/settings.php:74
 msgid "cc_settings.col_usage"
 msgstr ""
 
-#: inc/settings.php:66
+#: inc/settings.php:61
 msgid "cc_settings.reject_all_btn"
 msgstr ""
 
-#: inc/settings.php:64
+#: inc/settings.php:59
 msgid "cc_settings.save_btn"
 msgstr ""
 
-#: inc/settings.php:60
+#: inc/settings.php:55
 msgid "cc_settings.title"
 msgstr ""
 
-#: locale.php:23
+#: locale.php:22
 msgid "Error on save process !"
 msgstr ""
 
@@ -170,24 +170,20 @@ msgstr ""
 msgid "label.consent.transition"
 msgstr ""
 
-#: locale.php:24
+#: locale.php:23
 msgid "label.cookieExpiration"
 msgstr ""
 
-#: locale.php:27
+#: locale.php:26
 msgid "label.cookieName"
 msgstr ""
 
-#: locale.php:26
+#: locale.php:25
 msgid "label.globalSettings"
 msgstr ""
 
 #: locale.php:17
 msgid "label.iframeSettings"
-msgstr ""
-
-#: locale.php:18
-msgid "label.iframeSettingsHelp"
 msgstr ""
 
 #: locale.php:6
@@ -218,42 +214,42 @@ msgstr ""
 msgid "main.title"
 msgstr ""
 
-#: locale.php:28
+#: locale.php:27
 msgid "Name of the cookie set by the plugin"
 msgstr ""
 
-#: locale.php:25
+#: locale.php:24
 msgid "Number of days before the cookie expires (182 days = 6 months)"
 msgstr ""
 
-#: locale.php:22
+#: locale.php:21
 msgid "Saved with success"
 msgstr ""
 
-#: locale.php:31
+#: locale.php:30
 msgid "script.content"
 msgstr ""
 
-#: locale.php:32
+#: locale.php:31
 msgid "script.content_help"
 msgstr ""
 
-#: locale.php:29
+#: locale.php:28
 msgid "script.id"
 msgstr ""
 
-#: locale.php:30
+#: locale.php:29
 msgid "script.id_help"
 msgstr ""
 
-#: locale.php:19
+#: locale.php:18
 msgid "tab.layout"
 msgstr ""
 
-#: locale.php:21
+#: locale.php:20
 msgid "tab.scripts"
 msgstr ""
 
-#: locale.php:20
+#: locale.php:19
 msgid "tab.settings"
 msgstr ""

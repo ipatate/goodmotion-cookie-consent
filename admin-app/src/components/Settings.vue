@@ -26,7 +26,12 @@
     </fieldset>
     <fieldset>
       <legend>{{ __('label.iframeSettings') }}</legend>
-      <FormKit type="checkbox" name="iframes" :options="store.iframeOptions" />
+      <FormKit
+        type="checkbox"
+        name="iframes"
+        :options="store.iframeOptions"
+        :help="__('label.iframeSettingsHelp')"
+      />
     </fieldset>
     <FormKit
       type="submit"

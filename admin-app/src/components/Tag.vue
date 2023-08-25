@@ -33,6 +33,7 @@
           :required="store.scripts[slug].activated"
         />
         <FormKit
+          v-show="false"
           type="textarea"
           rows="10"
           name="template"

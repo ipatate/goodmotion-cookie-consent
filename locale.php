@@ -15,6 +15,7 @@ return [
   'label.settings.positionY' => [__('label.settings.positionY', 'goodmotion-cookie-consent')],
   'label.settings.transition' => [__('label.settings.transition', 'goodmotion-cookie-consent')],
   'label.iframeSettings' => [__('label.iframeSettings', 'goodmotion-cookie-consent')],
+  'label.iframeSettingsHelp' => [__('label.iframeSettingsHelp', 'goodmotion-cookie-consent')],
   'tab.layout' => [__('tab.layout', 'goodmotion-cookie-consent')],
   'tab.settings' => [__('tab.settings', 'goodmotion-cookie-consent')],
   'tab.scripts' => [__('tab.scripts', 'goodmotion-cookie-consent')],
