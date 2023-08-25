@@ -90,3 +90,9 @@ add_action('admin_enqueue_scripts', __NAMESPACE__ . '\set_script_translations', 
 
 // set scripts tags
 Inc\set_scripts();
+
+
+
+add_action('wp_footer', function () {
+  echo '<a class="cc_settings">Cookies settings</a>';
+}, 100);

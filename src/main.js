@@ -1,11 +1,11 @@
 import './style.css'
 
 document.addEventListener('DOMContentLoaded', async () => {
-  // add html to body
-  const body = document.querySelector('body')
-  body.insertAdjacentHTML(
-    'beforeend',
-    `<button type="button" data-cc="c-settings">Cookie settings</button>`,
-  )
+  const btn = document.querySelectorAll('.cc_settings')
+  if (btn.length > 0) {
+    btn.forEach((el) => {
+      el.dataset.cc = 'c-settings'
+    })
+  }
   await import('./cookie-consent-settings')
 })

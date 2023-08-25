@@ -22,8 +22,8 @@ function save_gcc($key)
 {
   if (!$key) return;
   $data = $_POST['data'];
-  $decoded = json_decode(str_replace(['\\n', '\\'], '', $data));
   $data = sanitize_text_field($data);
+  $decoded = json_decode(str_replace(['\\n', '\\'], '', $data));
 
   // update value
   if ($data) {
