@@ -12,6 +12,7 @@ function set_scripts()
         add_action('wp_head', function () use ($value) {
 
           $str = "<!-- Google tag (gtag.js) --><script type=\"text/plain\" data-cookiecategory=\"{$value->type}\" src=\"https://www.googletagmanager.com/gtag/js?id={$value->id}\"></script>";
+          $str .= "<script type=\"text/plain\" data-cookiecategory=\"{$value->type}\">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '{$value->id}');</script>";
 
           if ($value->template) {
             $str .= "<script type=\"text/plain\" data-cookiecategory=\"{$value->type}\">";
