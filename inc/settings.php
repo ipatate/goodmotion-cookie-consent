@@ -142,7 +142,7 @@ function get_settings_modal()
     $settings = namespace\gcc_value('settings');
     $iframes = $settings->iframes;
     foreach ($iframes as $k => $value) {
-      if (array_key_exists($value, $services)) {
+      if ($services && array_key_exists($value, $services)) {
         foreach ($services[$value] as $key => $value) {
           $display['cookie_table'][] = $value;
         }

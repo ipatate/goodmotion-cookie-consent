@@ -35,17 +35,17 @@ export const useMainStore = defineStore('main', () => {
       name: 'Google Analytics',
       slug: 'google_analytics',
     },
-    GTM: {
-      name: 'Google Tag Manager',
-      slug: 'google_tag_manager',
-    },
     FB: {
       name: 'Facebook Pixel',
       slug: 'facebook_pixel',
     },
-    // Linkedin: {
-    //   name: 'Linkedin',
-    //   slug: 'linkedin',
+    Linkedin: {
+      name: 'Linkedin',
+      slug: 'linkedin_insight',
+    },
+    // GTM: {
+    //   name: 'Google Tag Manager',
+    //   slug: 'google_tag_manager',
     // },
   }
 

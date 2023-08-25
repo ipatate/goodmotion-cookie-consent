@@ -29,7 +29,7 @@ function get_services()
         'is_regex' => true,
       ],
     ],
-    'linkedin' => [
+    'linkedin_insight' => [
       [
         'col1' => 'bcookie',
         'col2' => 'linkedin.com',

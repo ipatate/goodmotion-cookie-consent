@@ -21,8 +21,10 @@ function gcc_value($key)
 function save_gcc($key)
 {
   if (!$key) return;
-  $data = sanitize_text_field($_POST['data']);
-  $decoded = json_decode(str_replace('\\', '', $data),);
+  $data = $_POST['data'];
+  $decoded = json_decode(str_replace(['\\n', '\\'], '', $data));
+  $data = sanitize_text_field($data);
+
   // update value
   if ($data) {
     update_option(GOODMOTION_COOKIE_CONSENT_PREFIX . $key, $decoded);

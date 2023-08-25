@@ -70,7 +70,6 @@ const store = useMainStore()
 
 const submitHandler = (value) => {
   const scriptsMix = { ...store.scripts, [props.slug]: value }
-  console.log(scriptsMix)
   store.saveValues('save_gcc_scripts', scriptsMix)
 }
 </script>

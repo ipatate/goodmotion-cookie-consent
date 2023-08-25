@@ -6,7 +6,7 @@
 body.settings_page_goodmotion-cookie-consent #wpcontent {
   --fk-bg-submit: #62929a;
   --fk-bg-submit-hover: #4c6e76;
-  --fk-max-width-input: 50em;
+  /* --fk-max-width-input: 50em; */
   @apply bg-secondary text-typo;
 }
 
