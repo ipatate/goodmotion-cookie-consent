@@ -13,3 +13,11 @@ WIP - This plugin is under development
 ### How to use
 
 ...
+
+
+### Credits
+
+### Cookie consent from [@orestbida](https://github.com/orestbida)
+
+- [Cookie Consent](https://github.com/orestbida/cookieconsent)
+- [iframe manager](https://github.com/orestbida/iframemanager)
