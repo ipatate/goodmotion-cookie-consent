@@ -1,5 +1,29 @@
 <?php
 
+/**
+ * Plugin Name: Goodmotion Cookie Consent
+ *
+ * @package           GoodmotionCookieConsent
+ * @author            infos@goodmotion.fr
+ * @copyright         2023 Goodmotion
+ * @license           GPL-2.0-or-later
+ *
+ * @wordpress-plugin
+ * Plugin Name:       Goodmotion Cookie Consent
+ * Plugin URI:        false
+ * Description:       false
+ * Version:           0.0.1
+ * Requires at least: 6.0
+ * Requires PHP:      8.0
+ * Author:            Faramaz patrick
+ * Author URI:        https://goodmotion.fr
+ * Text Domain:       goodmotion-cookie-consent
+ * License:           GPL v2 or later
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Update URI:        false
+ */
+
+
 namespace GoodmotionCookieConsent;
 // assets
 if (!defined('WP_ENV')) {
@@ -29,29 +53,6 @@ require_once(dirname(__FILE__) . '/inc/set_scripts.php');
 require_once(dirname(__FILE__) . '/inc/rest.php');
 
 use function GoodmotionCookieConsent\Inc\load_assets;
-
-/**
- * Plugin Name: Goodmotion Cookie Consent
- *
- * @package           GoodmotionCookieConsent
- * @author            infos@goodmotion.fr
- * @copyright         2023 Goodmotion
- * @license           GPL-2.0-or-later
- *
- * @wordpress-plugin
- * Plugin Name:       Goodmotion Cookie Consent
- * Plugin URI:        false
- * Description:       false
- * Version:           0.0.1
- * Requires at least: 6.0
- * Requires PHP:      8.0
- * Author:            Faramaz patrick
- * Author URI:        https://goodmotion.fr
- * Text Domain:       goodmotion-cookie-consent
- * License:           GPL v2 or later
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Update URI:        false
- */
 
 
 /**
@@ -96,7 +97,8 @@ add_action('admin_enqueue_scripts', __NAMESPACE__ . '\set_script_translations', 
 Inc\set_scripts();
 
 
-
-add_action('wp_footer', function () {
-  echo '<a class="cc_settings">Cookies settings</a>';
-}, 100);
+if (WP_ENV === 'development') {
+  add_action('wp_footer', function () {
+    echo '<a class="cc_settings">Cookies settings</a>';
+  }, 100);
+}
