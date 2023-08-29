@@ -46,6 +46,30 @@ manager.run({
       },
     },
   },
+  onFirstAction: function () {
+    console.log('first action')
+  },
+
+  onAccept: function () {
+    console.log('accept')
+  },
+
+  onChange: function ({ changedServices, eventSource }) {
+    const accept = eventSource.action === 'accept'
+    const accepted = []
+    // only 2 categories for this site
+    if (cc.allowedCategory('analytics')) {
+      accepted.push('analytics')
+    }
+    changedServices.forEach(function (service) {
+      if (accept) {
+        accepted.push('display')
+        cc.accept(accepted)
+      } else {
+        cc.accept(accepted, ['display'])
+      }
+    })
+  },
 })
 
 const manageDisplay = (_cc) => {

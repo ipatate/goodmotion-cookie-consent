@@ -13,6 +13,7 @@ function hasAnalytics()
 {
   $scripts = namespace\gcc_value('scripts');
   $has = false;
+  if (!$scripts) return $has;
   foreach ($scripts as $key => $value) {
     if ($value->activated === true && $value->type === 'analytics') {
       $has = true;
@@ -111,6 +112,8 @@ function get_settings_modal()
     ]
   ];
 
+  $scripts = namespace\gcc_value('scripts');
+  $services = namespace\get_services();
   // add analytics block
   if (hasAnalytics()) {
     $analytics =
@@ -125,8 +128,6 @@ function get_settings_modal()
         'cookie_table' => [],
       ];
 
-    $scripts = namespace\gcc_value('scripts');
-    $services = namespace\get_services();
 
     foreach ($scripts as $key => $value) {
       if ($value->activated === true && $value->type === 'analytics' && array_key_exists($key, $services)) {

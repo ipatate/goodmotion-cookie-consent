@@ -5,6 +5,7 @@ namespace GoodmotionCookieConsent\Inc;
 function set_scripts()
 {
   $scripts = namespace\gcc_value('scripts');
+  if (!is_array($scripts)) return;
   foreach ($scripts as $key => $value) {
     if ($value->activated === true && $value->type === 'analytics') {
 

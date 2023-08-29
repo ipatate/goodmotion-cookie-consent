@@ -28,7 +28,7 @@ function add_script($slug, $path, $port, $is_admin, $is_ts = false)
 
   if (WP_ENV !== 'development') {
 
-    $config = Helpers\get_manifest($root_path . '/dist/manifest.json');
+    $config = Helpers\get_manifest($path . '/dist/manifest.json');
     if (!$config) {
       return;
     }
@@ -40,7 +40,7 @@ function add_script($slug, $path, $port, $is_admin, $is_ts = false)
     // loop for enqueue script
     foreach ($ordered as $key => $value) {
       if (property_exists($key, 'css') === true || strpos($value->src, '.css') !== false) continue;
-      wp_enqueue_script($slug . '-' . $key, $public_path . '/dist/' . $value->file, ['wp-i18n'], $key, true);
+      wp_enqueue_script($slug . '-' . $key, $public_path . '/dist/' . $value->file, [], $key, true);
     }
   } else {
     // development
@@ -117,7 +117,7 @@ function enqueue_styles($slug, $path, $is_admin)
             wp_enqueue_style(
               $slug . '-' . $key,
               $public_path . '/dist/' . $file,
-              ['wp-i18n'],
+              [],
               $key,
               'all'
             );
