@@ -25,6 +25,15 @@
       />
     </fieldset>
     <fieldset>
+      <legend>{{ __('label.bannerSettings') }}</legend>
+      <FormKit
+        type="checkbox"
+        name="bannerSettingsButton"
+        :value="true"
+        :help="__('label.bannerSettingsHelp')"
+      />
+    </fieldset>
+    <fieldset>
       <legend>{{ __('label.iframeSettings') }}</legend>
       <FormKit
         type="checkbox"

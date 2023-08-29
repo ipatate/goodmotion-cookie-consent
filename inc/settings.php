@@ -31,7 +31,7 @@ function hasIframe()
 
 function get_consent_modal()
 {
-  return [
+  $modal = [
     'title' => __("cc_consent.title", 'goodmotion-cookie-consent'),
     'description' =>
     __("cc_consent.description", 'goodmotion-cookie-consent'),
@@ -41,10 +41,10 @@ function get_consent_modal()
     ],
     'secondary_btn' => [
       'text' => __(
-        "cc_consent.settings_btn",
+        "cc_consent.reject_btn",
         'goodmotion-cookie-consent'
       ),
-      'role' => 'settings'
+      'role' => 'accept_necessary'
     ],
     'revision_message' =>
     __(
@@ -52,6 +52,19 @@ function get_consent_modal()
       'goodmotion-cookie-consent'
     )
   ];
+
+  $settings = namespace\gcc_value('settings');
+  if ($settings->bannerSettingsButton === true) {
+    $modal['secondary_btn'] = [
+      'text' => __(
+        "cc_consent.settings_btn",
+        'goodmotion-cookie-consent'
+      ),
+      'role' => 'settings'
+    ];
+  }
+
+  return $modal;
 }
 
 function get_settings_modal()

@@ -6,14 +6,14 @@ namespace GoodmotionCookieConsent\Inc;
 function get_list_iframes()
 {
   $iframe = ['youtube', 'vimeo'];
-
+  $iframe = apply_filters('gcc_list_iframes', $iframe);
   return $iframe;
 }
 
 
 function get_list_services()
 {
-  return [
+  $services = [
     'GA' => [
       'name' => 'Google Analytics',
       'slug' => 'google_analytics',
@@ -27,6 +27,8 @@ function get_list_services()
       'slug' => 'linkedin_insight',
     ]
   ];
+  $services = apply_filters('gcc_list_services', $services);
+  return $services;
 }
 
 

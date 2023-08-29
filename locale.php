@@ -30,4 +30,6 @@ return [
   'script.id_help' => [__('script.id_help', 'goodmotion-cookie-consent')],
   'script.content' => [__('script.content', 'goodmotion-cookie-consent')],
   'script.content_help' => [__('script.content_help', 'goodmotion-cookie-consent')],
+  'label.bannerSettings' => [__('label.bannerSettings', 'goodmotion-cookie-consent')],
+  'label.bannerSettingsHelp' => [__('label.bannerSettingsHelp', 'goodmotion-cookie-consent')],
 ];
