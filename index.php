@@ -2,6 +2,22 @@
 
 namespace GoodmotionCookieConsent;
 // assets
+if (!defined('WP_ENV')) {
+  define('WP_ENV', 'development');
+}
+
+
+define('GOODMOTION_COOKIE_CONSENT_PATH', plugin_dir_path(__FILE__));
+
+define('GOODMOTION_COOKIE_CONSENT_ADMIN_DIR', 'admin-app');
+define('GOODMOTION_COOKIE_CONSENT_ADMIN_PATH', plugin_dir_path(__FILE__) . GOODMOTION_COOKIE_CONSENT_ADMIN_DIR);
+
+define('GOODMOTION_COOKIE_CONSENT_NAME', 'goodmotion-cookie-consent');
+
+define('GOODMOTION_COOKIE_CONSENT_PREFIX', 'goodmotion-cookie-consent_');
+
+
+
 require_once(dirname(__FILE__) . '/inc/load_assets.php');
 //
 require_once(dirname(__FILE__) . '/inc/options_page.php');
@@ -10,6 +26,7 @@ require_once(dirname(__FILE__) . '/inc/load_config.php');
 require_once(dirname(__FILE__) . '/inc/settings.php');
 require_once(dirname(__FILE__) . '/inc/iframe.php');
 require_once(dirname(__FILE__) . '/inc/set_scripts.php');
+require_once(dirname(__FILE__) . '/inc/rest.php');
 
 use function GoodmotionCookieConsent\Inc\load_assets;
 
@@ -36,19 +53,6 @@ use function GoodmotionCookieConsent\Inc\load_assets;
  * Update URI:        false
  */
 
-if (!defined('WP_ENV')) {
-  define('WP_ENV', 'development');
-}
-
-
-define('GOODMOTION_COOKIE_CONSENT_PATH', plugin_dir_path(__FILE__));
-
-define('GOODMOTION_COOKIE_CONSENT_ADMIN_DIR', 'admin-app');
-define('GOODMOTION_COOKIE_CONSENT_ADMIN_PATH', plugin_dir_path(__FILE__) . GOODMOTION_COOKIE_CONSENT_ADMIN_DIR);
-
-define('GOODMOTION_COOKIE_CONSENT_NAME', 'goodmotion-cookie-consent');
-
-define('GOODMOTION_COOKIE_CONSENT_PREFIX', 'goodmotion-cookie-consent_');
 
 /**
  * init assets front

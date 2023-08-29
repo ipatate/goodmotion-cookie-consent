@@ -5,13 +5,13 @@ import legacy from '@vitejs/plugin-legacy'
 // https://vitejs.dev/config/
 export const viteConfig = {
   plugins: [
-    // legacy({
-    //   // target is default
-    //   // targets: ['last 1 version'],
-    //   // additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
-    //   // polyfills: [],
-    //   // modernPolyfills: [],
-    // }),
+    legacy({
+      //   // target is default
+      targets: ['last 2 version', 'not ie <= 11', 'not op_mini all'],
+      //   // additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
+      //   // polyfills: [],
+      //   // modernPolyfills: [],
+    }),
   ],
   base:
     process.env.APP_ENV === 'development'
