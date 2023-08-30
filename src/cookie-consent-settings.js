@@ -27,25 +27,11 @@ const finalSettings = window.goodmotionCookieConsentSettings
   : defaultSettings
 
 // iframemanager
-manager.run({
+window.goodmotionCookieConsentLocales.iframe
+
+const iframes = {
   currLang: 'en',
-  services: {
-    video: {
-      embedUrl: '{data-id}',
-      // thumbnailUrl: 'https://i3.ytimg.com/vi/{data-id}/hqdefault.jpg',
-      iframe: {
-        allow:
-          'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture',
-        frameBorder: 0,
-      },
-      // cookie: {
-      //   name: 'cc_youtube',
-      // },
-      languages: {
-        en: window.goodmotionCookieConsentLocales.iframe.video,
-      },
-    },
-  },
+  services: {},
   onFirstAction: function () {
     console.log('first action')
   },
@@ -70,7 +56,13 @@ manager.run({
       }
     })
   },
-})
+}
+
+if (window.goodmotionCookieConsentLocales.iframe) {
+  iframes.services = window.goodmotionCookieConsentLocales.iframe
+}
+
+manager.run(iframes)
 
 const manageDisplay = (_cc) => {
   if (_cc.allowedCategory('display')) {

@@ -7,8 +7,9 @@
 
 namespace GoodmotionCookieConsent\Inc;
 
-require dirname(__FILE__) . '/../services.php';
+require dirname(__FILE__) . '/services.php';
 
+/** scripts from DB */
 function hasAnalytics()
 {
   $scripts = namespace\gcc_value('scripts');
@@ -22,6 +23,7 @@ function hasAnalytics()
   return $has;
 }
 
+/** iframes from DB */
 function hasIframe()
 {
   $settings = namespace\gcc_value('settings');
@@ -29,7 +31,9 @@ function hasIframe()
 }
 
 
-
+/**
+ * define cookie consent modal content
+ */
 function get_consent_modal()
 {
   $modal = [
@@ -54,6 +58,7 @@ function get_consent_modal()
     )
   ];
 
+  // if settings button is activated instead of reject all
   $settings = namespace\gcc_value('settings');
   if ($settings->bannerSettingsButton === true) {
     $modal['secondary_btn'] = [
@@ -68,6 +73,11 @@ function get_consent_modal()
   return $modal;
 }
 
+
+
+/**
+ * define cookie settings modal content
+ */
 function get_settings_modal()
 {
   $values = [
@@ -113,7 +123,7 @@ function get_settings_modal()
   ];
 
   $scripts = namespace\gcc_value('scripts');
-  $services = namespace\get_services();
+  $services = namespace\get_services_settings();
   // add analytics block
   if (hasAnalytics()) {
     $analytics =
@@ -128,11 +138,10 @@ function get_settings_modal()
         'cookie_table' => [],
       ];
 
-
     foreach ($scripts as $key => $value) {
       if ($value->activated === true && $value->type === 'analytics' && array_key_exists($key, $services)) {
-        foreach ($services[$key] as $key => $value) {
-          $analytics['cookie_table'][] = $value;
+        if (array_key_exists('content', $services[$key])) {
+          $analytics['cookie_table'][] = $services[$key]['content'];
         }
       }
     }
@@ -154,11 +163,12 @@ function get_settings_modal()
     ];
 
     $settings = namespace\gcc_value('settings');
-    $iframes = $settings->iframes;
-    foreach ($iframes as $k => $value) {
-      if ($services && array_key_exists($value, $services)) {
-        foreach ($services[$value] as $key => $value) {
-          $display['cookie_table'][] = $value;
+    $iframesActivated = $settings->iframes;
+    $iframes = namespace\get_iframes_settings();
+    foreach ($iframesActivated as $k => $value) {
+      if ($iframes && array_key_exists($value, $iframes)) {
+        if (array_key_exists('content', $iframes[$value])) {
+          $display['cookie_table'][] = $iframes[$value]['content'];
         }
       }
     }
@@ -169,16 +179,28 @@ function get_settings_modal()
   return $values;
 }
 
+
+/**
+ * define iframe modal content
+ */
 function get_iframe()
 {
-  return [
-    "video" => [
-      "notice" =>
-      __("By clicking on \"Load content\", you accept the deposit of third-party cookies intended to offer you content.", 'goodmotion-cookie-consent'),
-      "loadBtn " => __("Load once", 'goodmotion-cookie-consent'),
-      "loadAllBtn" => __("Don't ask again", 'goodmotion-cookie-consent'),
-    ],
-  ];
+  if (hasIframe()) {
+    $settings = namespace\gcc_value('settings');
+    $iframesActivated = $settings->iframes;
+    $iframes = namespace\get_iframes_settings();
+    $iframes_configs = [];
+    foreach ($iframesActivated as $k => $value) {
+      if ($iframes && array_key_exists($value, $iframes)) {
+        if (array_key_exists('settings', $iframes[$value])) {
+          // var_dump(($iframes[$value]['settings']['thumbnailUrl']));
+          $iframes_configs[$value] = $iframes[$value]['settings'];
+        }
+      }
+    }
+    return $iframes_configs;
+  }
+  return [];
 }
 
 

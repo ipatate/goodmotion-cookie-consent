@@ -5,29 +5,31 @@ namespace GoodmotionCookieConsent\Inc;
 
 function get_list_iframes()
 {
-  $iframe = ['youtube', 'vimeo'];
-  $iframe = apply_filters('gcc_list_iframes', $iframe);
-  return $iframe;
+  $iframes = [];
+  $iframes = apply_filters('gcc_list_iframes', $iframes);
+
+  // return only slug
+  $iframes = array_map(function ($value) {
+    return $value['slug'];
+  }, $iframes);
+
+  return $iframes;
 }
 
 
 function get_list_services()
 {
-  $services = [
-    'GA' => [
-      'name' => 'Google Analytics',
-      'slug' => 'google_analytics',
-    ],
-    'FB' => [
-      'name' => 'Facebook Pixel',
-      'slug' => 'facebook_pixel',
-    ],
-    'Linkedin' => [
-      'name' => 'Linkedin',
-      'slug' => 'linkedin_insight',
-    ]
-  ];
+  $services = [];
   $services = apply_filters('gcc_list_services', $services);
+
+  // return only name and slug
+  $services = array_map(function ($value) {
+    return [
+      'name' => $value['name'],
+      'slug' => $value['slug'],
+    ];
+  }, $services);
+
   return $services;
 }
 

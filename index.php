@@ -51,6 +51,7 @@ require_once(dirname(__FILE__) . '/inc/settings.php');
 require_once(dirname(__FILE__) . '/inc/iframe.php');
 require_once(dirname(__FILE__) . '/inc/set_scripts.php');
 require_once(dirname(__FILE__) . '/inc/rest.php');
+require_once(dirname(__FILE__) . '/default.php');
 
 use function GoodmotionCookieConsent\Inc\load_assets;
 

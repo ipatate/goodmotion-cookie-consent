@@ -33,7 +33,6 @@ function parseIframe(\DOMXpath $xpath): void
   $iframesSettings = $settings->iframes;
   if (count($iframesSettings) === 0) return;
 
-  $name = 'contentdisplay';
   // search wp-block-embed__wrapper in class
   $containers = $xpath->query("//div[contains(@class, 'wp-block-embed__wrapper')]");
   foreach ($containers as $key => $container) {
@@ -51,8 +50,20 @@ function parseIframe(\DOMXpath $xpath): void
       $frameborder = $iframe->getAttribute('frameborder');
 
       $div = $container->ownerDocument->createElement('div');
-      $div->setAttribute('data-id', $src);
-      $div->setAttribute('data-service', 'video');
+      // service name
+      $service_name = $service[0];
+      // use id or not
+      $iframes = namespace\get_iframes_settings();
+      $useId = false;
+      $data_id = '';
+      if (array_key_exists($service_name, $iframes) && array_key_exists('settings', $iframes[$service_name]) && array_key_exists('useId', $iframes[$service_name]['settings'])) {
+        $useId = $iframes[$service_name]['settings']['useId'];
+        // extract id from src
+        $src = explode('/', $src);
+        $data_id = end($src);
+      }
+      $div->setAttribute('data-id', ($useId ? $data_id : $src));
+      $div->setAttribute('data-service', $service_name);
       $div->setAttribute('data-allow', $allow);
       if ($allowfullscreen) {
         $div->setAttribute('data-allowfullscreen', $allowfullscreen);
