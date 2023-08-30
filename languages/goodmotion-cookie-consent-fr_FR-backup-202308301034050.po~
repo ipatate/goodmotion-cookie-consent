@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Goodmotion Cookie Consent\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-14 15:13+0000\n"
-"PO-Revision-Date: 2023-08-30 10:34+0000\n"
+"PO-Revision-Date: 2023-08-30 10:27+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -69,7 +69,7 @@ msgstr "Contenu externe"
 #. Description of the plugin
 #. URI of the plugin
 msgid "false"
-msgstr "false"
+msgstr ""
 
 #. Author of the plugin
 msgid "Faramaz patrick"

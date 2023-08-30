@@ -33,16 +33,16 @@ function hasIframe()
 function get_consent_modal()
 {
   $modal = [
-    'title' => __("cc_consent.title", 'goodmotion-cookie-consent'),
+    'title' => __("We use cookies!", 'goodmotion-cookie-consent'),
     'description' =>
-    __("cc_consent.description", 'goodmotion-cookie-consent'),
+    __("Hi, this website uses essential cookies to ensure its proper operation and tracking cookies to understand how you interact with it.", 'goodmotion-cookie-consent'),
     'primary_btn' => [
-      'text' => __("cc_consent.accept_btn", 'goodmotion-cookie-consent'),
+      'text' => __("Accept All", 'goodmotion-cookie-consent'),
       'role' => 'accept_all'
     ],
     'secondary_btn' => [
       'text' => __(
-        "cc_consent.reject_btn",
+        "Reject All",
         'goodmotion-cookie-consent'
       ),
       'role' => 'accept_necessary'
@@ -58,7 +58,7 @@ function get_consent_modal()
   if ($settings->bannerSettingsButton === true) {
     $modal['secondary_btn'] = [
       'text' => __(
-        "cc_consent.settings_btn",
+        "Preferences",
         'goodmotion-cookie-consent'
       ),
       'role' => 'settings'
@@ -72,37 +72,37 @@ function get_settings_modal()
 {
   $values = [
     'title' => __(
-      "cc_settings.title",
+      "🍪 Cookies settings",
       'goodmotion-cookie-consent'
     ),
-    'save_settings_btn' => __("cc_settings.save_btn", 'goodmotion-cookie-consent'),
-    'accept_all_btn' => __("cc_settings.accept_all_btn", 'goodmotion-cookie-consent'),
-    'reject_all_btn' => __("cc_settings.reject_all_btn", 'goodmotion-cookie-consent'),
-    'close_btn_label' => __("cc_settings.close_btn", 'goodmotion-cookie-consent'),
+    'save_settings_btn' => __("Save settings", 'goodmotion-cookie-consent'),
+    'accept_all_btn' => __("Accept all", 'goodmotion-cookie-consent'),
+    'reject_all_btn' => __("Reject all", 'goodmotion-cookie-consent'),
+    'close_btn_label' => __("Close", 'goodmotion-cookie-consent'),
     'cookie_table_headers' => [
       [
-        'col1' => __("cc_settings.col_name", 'goodmotion-cookie-consent')
+        'col1' => __("Name", 'goodmotion-cookie-consent')
       ],
       [
         'col2' => __(
-          "cc_settings.col_domain",
+          "Domain",
           'goodmotion-cookie-consent'
         )
       ],
       [
         'col3' => __(
-          "cc_settings.col_usage",
+          "Usage",
           'goodmotion-cookie-consent'
         )
       ],
     ],
     'blocks' => [
       [
-        'description' => __("cc_block.table_description", 'goodmotion-cookie-consent')
+        'description' => __("We use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want.", 'goodmotion-cookie-consent')
       ],
       [
-        'title' => __("cc_block.necessary_title", 'goodmotion-cookie-consent'),
-        'description' => __("cc_block.necessary_description", 'goodmotion-cookie-consent'),
+        'title' => __("Strictly necessary cookies", 'goodmotion-cookie-consent'),
+        'description' => __("These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly", 'goodmotion-cookie-consent'),
         'toggle' => [
           'value' => "necessary",
           'enabled' => true,
@@ -118,8 +118,8 @@ function get_settings_modal()
   if (hasAnalytics()) {
     $analytics =
       [
-        'title' => __("cc_block.analytics_title", 'goodmotion-cookie-consent'),
-        'description' => __("cc_block.analytics_description", 'goodmotion-cookie-consent'),
+        'title' => __("Performance and Analytics cookies", 'goodmotion-cookie-consent'),
+        'description' => __("These cookies collect information about how you use the website, which pages you visited and which links you clicked on. All of the data is anonymized and cannot be used to identify you", 'goodmotion-cookie-consent'),
         'toggle' => [
           'value' => "analytics",
           'enabled' => false,
@@ -143,8 +143,8 @@ function get_settings_modal()
   if (hasIframe()) {
     // add display block
     $display = [
-      'title' => __("cc_block.display_title", 'goodmotion-cookie-consent'),
-      'description' => __("cc_block.display_description", 'goodmotion-cookie-consent'),
+      'title' => __("External Display", 'goodmotion-cookie-consent'),
+      'description' => __("We use third-party services to provide functionality and display useful content on our website.", 'goodmotion-cookie-consent'),
       'toggle' => [
         'value' => "display",
         'enabled' => false,
@@ -174,9 +174,9 @@ function get_iframe()
   return [
     "video" => [
       "notice" =>
-      __("cc_iframe.video_notice", 'goodmotion-cookie-consent'),
-      "loadBtn " => __("cc_iframe.load_btn", 'goodmotion-cookie-consent'),
-      "loadAllBtn" => __("cc_iframe.ask_btn", 'goodmotion-cookie-consent'),
+      __("By clicking on \"Load content\", you accept the deposit of third-party cookies intended to offer you content.", 'goodmotion-cookie-consent'),
+      "loadBtn " => __("Load once", 'goodmotion-cookie-consent'),
+      "loadAllBtn" => __("Don't ask again", 'goodmotion-cookie-consent'),
     ],
   ];
 }

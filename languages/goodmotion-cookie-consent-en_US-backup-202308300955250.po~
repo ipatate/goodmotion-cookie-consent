@@ -1,0 +1,266 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Goodmotion Cookie Consent\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-14 15:13+0000\n"
+"PO-Revision-Date: 2023-08-24 19:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.4; wp-6.3\n"
+"X-Domain: goodmotion-cookie-consent"
+
+#: locale.php:5
+#| msgid "button_save"
+msgid "button.save"
+msgstr "sauver"
+
+#: inc/settings.php:101
+msgid "cc_block.analytics_description"
+msgstr ""
+
+#: inc/settings.php:100
+msgid "cc_block.analytics_title"
+msgstr ""
+
+#: inc/settings.php:128
+msgid "cc_block.display_description"
+msgstr ""
+
+#: inc/settings.php:127
+msgid "cc_block.display_title"
+msgstr ""
+
+#: services.php:20
+msgid "cc_block.fbp_description"
+msgstr ""
+
+#: services.php:12 services.php:28
+msgid "cc_block.ga_description"
+msgstr ""
+
+#: services.php:36 services.php:42 services.php:48 services.php:54
+#: services.php:60 services.php:66 services.php:72
+msgid "cc_block.lkdin_description"
+msgstr ""
+
+#: inc/settings.php:86
+msgid "cc_block.necessary_description"
+msgstr ""
+
+#: inc/settings.php:85
+msgid "cc_block.necessary_title"
+msgstr ""
+
+#: inc/settings.php:82
+msgid "cc_block.table_description"
+msgstr ""
+
+#: services.php:80 services.php:87
+msgid "cc_block.video_description"
+msgstr ""
+
+#: inc/settings.php:34
+msgid "cc_consent.accept_btn"
+msgstr ""
+
+#: inc/settings.php:32
+msgid "cc_consent.description"
+msgstr ""
+
+#: inc/settings.php:45
+msgid "cc_consent.revision_message"
+msgstr ""
+
+#: inc/settings.php:38
+msgid "cc_consent.settings_btn"
+msgstr ""
+
+#: inc/settings.php:30
+msgid "cc_consent.title"
+msgstr ""
+
+#: inc/settings.php:160
+msgid "cc_iframe.ask_btn"
+msgstr ""
+
+#: inc/settings.php:159
+msgid "cc_iframe.load_btn"
+msgstr ""
+
+#: inc/settings.php:158
+msgid "cc_iframe.video_notice"
+msgstr ""
+
+#: inc/settings.php:60
+msgid "cc_settings.accept_all_btn"
+msgstr ""
+
+#: inc/settings.php:62
+msgid "cc_settings.close_btn"
+msgstr ""
+
+#: inc/settings.php:68
+msgid "cc_settings.col_domain"
+msgstr ""
+
+#: inc/settings.php:65
+msgid "cc_settings.col_name"
+msgstr ""
+
+#: inc/settings.php:74
+msgid "cc_settings.col_usage"
+msgstr ""
+
+#: inc/settings.php:61
+msgid "cc_settings.reject_all_btn"
+msgstr ""
+
+#: inc/settings.php:59
+msgid "cc_settings.save_btn"
+msgstr ""
+
+#: inc/settings.php:55
+msgid "cc_settings.title"
+msgstr ""
+
+#: locale.php:22
+msgid "Error on save process !"
+msgstr "Erreur lors de la sauvegarde !"
+
+#. Description of the plugin
+#. URI of the plugin
+msgid "false"
+msgstr ""
+
+#. Author of the plugin
+msgid "Faramaz patrick"
+msgstr ""
+
+#. Name of the plugin
+msgid "Goodmotion Cookie Consent"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://goodmotion.fr"
+msgstr ""
+
+#: locale.php:7
+msgid "label.consent"
+msgstr "Consent modal"
+
+#: locale.php:8
+msgid "label.consent.layout"
+msgstr "Consent"
+
+#: locale.php:9
+#, fuzzy
+#| msgid "label.consent.position1"
+msgid "label.consent.positionX"
+msgstr "Consent modal vertical position"
+
+#: locale.php:10
+#, fuzzy
+#| msgid "label.consent.position2"
+msgid "label.consent.positionY"
+msgstr "Consent modal horizontal position"
+
+#: locale.php:11
+msgid "label.consent.transition"
+msgstr "Consent modal transition"
+
+#: locale.php:23
+msgid "label.cookieExpiration"
+msgstr "Cookie expiration"
+
+#: locale.php:26
+msgid "label.cookieName"
+msgstr "Cookie name"
+
+#: locale.php:25
+msgid "label.globalSettings"
+msgstr "Global Settings"
+
+#: locale.php:17
+msgid "label.iframeSettings"
+msgstr ""
+
+#: locale.php:6
+msgid "label.modal.layout"
+msgstr "Consent modal Layout"
+
+#: locale.php:12
+msgid "label.settings"
+msgstr "Settings modal"
+
+#: locale.php:13
+msgid "label.settings.layout"
+msgstr "Settings"
+
+#: locale.php:14
+#, fuzzy
+#| msgid "label.settings.position1"
+msgid "label.settings.positionX"
+msgstr "Settings modal vertical position"
+
+#: locale.php:15
+#, fuzzy
+#| msgid "label.settings.position2"
+msgid "label.settings.positionY"
+msgstr "Settings modal horizontal position"
+
+#: locale.php:16
+msgid "label.settings.transition"
+msgstr "Settings modal transition"
+
+#: locale.php:4
+#| msgid "main_title"
+msgid "main.title"
+msgstr "Paramètres Cookie consent"
+
+#: locale.php:27
+msgid "Name of the cookie set by the plugin"
+msgstr "Name of the cookie set by the plugin"
+
+#: locale.php:24
+msgid "Number of days before the cookie expires (182 days = 6 months)"
+msgstr "Number of days before the cookie expires (182 days = 6 months)"
+
+#: locale.php:21
+msgid "Saved with success"
+msgstr "Sauvegarde réussie !"
+
+#: locale.php:30
+msgid "script.content"
+msgstr "Script Template"
+
+#: locale.php:31
+msgid "script.content_help"
+msgstr "The script that will render on the page. Don't include <script> tags."
+
+#: locale.php:28
+msgid "script.id"
+msgstr "Tracking ID"
+
+#: locale.php:29
+msgid "script.id_help"
+msgstr ""
+"Only enter the ID, e.g.: G-XXXXXXXXXX or UA-XXXXXX-XX, not the entire script "
+"code"
+
+#: locale.php:18
+msgid "tab.layout"
+msgstr "Layout"
+
+#: locale.php:20
+msgid "tab.scripts"
+msgstr "Scripts Tags"
+
+#: locale.php:19
+msgid "tab.settings"
+msgstr "Settings"

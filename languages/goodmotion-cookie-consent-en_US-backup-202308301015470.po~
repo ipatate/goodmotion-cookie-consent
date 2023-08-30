@@ -3,11 +3,11 @@ msgstr ""
 "Project-Id-Version: Goodmotion Cookie Consent\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-14 15:13+0000\n"
-"PO-Revision-Date: 2023-08-30 10:34+0000\n"
+"PO-Revision-Date: 2023-08-30 09:55+0000\n"
 "Last-Translator: \n"
-"Language-Team: Français\n"
-"Language: fr_FR\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,46 +17,57 @@ msgstr ""
 
 #: inc/settings.php:40
 msgid "Accept All"
-msgstr "Accepter tout"
+msgstr ""
 
 #: inc/settings.php:79
 msgid "Accept all"
-msgstr "Accepter tout"
-
-#: services.php:12 services.php:20 services.php:28 services.php:36
-#: services.php:42 services.php:48 services.php:54 services.php:60
-#: services.php:66 services.php:72
-msgid "Analytics"
-msgstr "Analytics"
+msgstr ""
 
 #: locale.php:5
 #| msgid "button_save"
 msgid "button.save"
 msgstr "sauver"
 
-#: inc/settings.php:177
-msgid ""
-"By clicking on \"Load content\", you accept the deposit of third-party "
-"cookies intended to offer you content."
+#: services.php:20
+msgid "cc_block.fbp_description"
 msgstr ""
-"En cliquant sur \"Charger le contenu\", vous acceptez le dépôt de "
-"tierscookies destinés à vous proposer du contenu."
+
+#: services.php:12 services.php:28
+msgid "cc_block.ga_description"
+msgstr ""
+
+#: services.php:36 services.php:42 services.php:48 services.php:54
+#: services.php:60 services.php:66 services.php:72
+msgid "cc_block.lkdin_description"
+msgstr ""
+
+#: services.php:80 services.php:87
+msgid "cc_block.video_description"
+msgstr ""
 
 #: inc/settings.php:51
 msgid "cc_consent.revision_message"
 msgstr ""
 
+#: inc/settings.php:179
+msgid "cc_iframe.ask_btn"
+msgstr ""
+
+#: inc/settings.php:178
+msgid "cc_iframe.load_btn"
+msgstr ""
+
+#: inc/settings.php:177
+msgid "cc_iframe.video_notice"
+msgstr ""
+
 #: inc/settings.php:81
 msgid "Close"
-msgstr "Fermer"
+msgstr ""
 
 #: inc/settings.php:87
 msgid "Domain"
-msgstr "Domaine"
-
-#: inc/settings.php:179
-msgid "Don't ask again"
-msgstr "Ne plus demander"
+msgstr ""
 
 #: locale.php:23
 msgid "Error on save process !"
@@ -64,12 +75,12 @@ msgstr "Erreur lors de la sauvegarde !"
 
 #: inc/settings.php:146
 msgid "External Display"
-msgstr "Contenu externe"
+msgstr ""
 
 #. Description of the plugin
 #. URI of the plugin
 msgid "false"
-msgstr "false"
+msgstr ""
 
 #. Author of the plugin
 msgid "Faramaz patrick"
@@ -84,8 +95,6 @@ msgid ""
 "Hi, this website uses essential cookies to ensure its proper operation and "
 "tracking cookies to understand how you interact with it."
 msgstr ""
-"Bonjour, ce site utilise des cookies essentiels pour son bon fonctionnement "
-"et des cookies de suivi pour comprendre comment vous interagissez avec lui."
 
 #. Author URI of the plugin
 msgid "https://goodmotion.fr"
@@ -93,11 +102,11 @@ msgstr ""
 
 #: locale.php:33
 msgid "label.bannerSettings"
-msgstr "Réglages des boutons de la bannière"
+msgstr ""
 
 #: locale.php:34
 msgid "label.bannerSettingsHelp"
-msgstr "Afficher le bouton préference au lieu de refuser tout"
+msgstr ""
 
 #: locale.php:7
 msgid "label.consent"
@@ -137,11 +146,11 @@ msgstr "Global Settings"
 
 #: locale.php:17
 msgid "label.iframeSettings"
-msgstr "Réglages des iframes"
+msgstr ""
 
 #: locale.php:18
 msgid "label.iframeSettingsHelp"
-msgstr "Iframes utilisés pour afficher du contenu externe"
+msgstr ""
 
 #: locale.php:6
 msgid "label.modal.layout"
@@ -171,10 +180,6 @@ msgstr "Settings modal horizontal position"
 msgid "label.settings.transition"
 msgstr "Settings modal transition"
 
-#: inc/settings.php:178
-msgid "Load once"
-msgstr "Charger une fois"
-
 #: locale.php:4
 #| msgid "main_title"
 msgid "main.title"
@@ -182,35 +187,35 @@ msgstr "Paramètres Cookie consent"
 
 #: inc/settings.php:84
 msgid "Name"
-msgstr "Nom"
+msgstr ""
 
 #: locale.php:28
 msgid "Name of the cookie set by the plugin"
-msgstr "Nom du cookie défini par le plugin"
+msgstr "Name of the cookie set by the plugin"
 
 #: locale.php:25
 msgid "Number of days before the cookie expires (182 days = 6 months)"
-msgstr "Nombre de jours avant l'expiration du cookie (182 jours = 6 mois)"
+msgstr "Number of days before the cookie expires (182 days = 6 months)"
 
 #: inc/settings.php:121
 msgid "Performance and Analytics cookies"
-msgstr "Cookies de performances et d'analyse"
+msgstr ""
 
 #: inc/settings.php:60
 msgid "Preferences"
-msgstr "Préférences"
+msgstr ""
 
 #: inc/settings.php:44
 msgid "Reject All"
-msgstr "Refuser tout"
+msgstr ""
 
 #: inc/settings.php:80
 msgid "Reject all"
-msgstr "Refuser tout"
+msgstr ""
 
 #: inc/settings.php:78
 msgid "Save settings"
-msgstr "Sauvegarder les paramètres"
+msgstr ""
 
 #: locale.php:22
 msgid "Saved with success"
@@ -222,8 +227,7 @@ msgstr "Script Template"
 
 #: locale.php:32
 msgid "script.content_help"
-msgstr ""
-"Le script qui s'affichera sur la page. N'incluez pas de balises <script>."
+msgstr "The script that will render on the page. Don't include <script> tags."
 
 #: locale.php:29
 msgid "script.id"
@@ -232,12 +236,12 @@ msgstr "Tracking ID"
 #: locale.php:30
 msgid "script.id_help"
 msgstr ""
-"Entrez uniquement l'ID, par exemple : G-XXXXXXXXXX ou UA-XXXXXX-XX, pas le "
-"script entier "
+"Only enter the ID, e.g.: G-XXXXXXXXXX or UA-XXXXXX-XX, not the entire script "
+"code"
 
 #: inc/settings.php:104
 msgid "Strictly necessary cookies"
-msgstr "Cookies strictement nécessaires"
+msgstr ""
 
 #: locale.php:19
 msgid "tab.layout"
@@ -256,8 +260,6 @@ msgid ""
 "These cookies are essential for the proper functioning of my website. "
 "Without these cookies, the website would not work properly"
 msgstr ""
-"Ces cookies sont essentiels au bon fonctionnement de mon site web. Sans ces "
-"cookies, le site ne fonctionnerait pas correctement"
 
 #: inc/settings.php:122
 msgid ""
@@ -265,18 +267,10 @@ msgid ""
 "you visited and which links you clicked on. All of the data is anonymized "
 "and cannot be used to identify you"
 msgstr ""
-"Ces cookies collectent des informations sur la façon dont vous utilisez le "
-"site Web, les pages que vous avez visitées et les liens que vous avez "
-"cliqués. Toutes les données sont anonymisées et ne peuvent pas être "
-"utilisées pour vous identifier"
 
 #: inc/settings.php:93
 msgid "Usage"
-msgstr "Usage"
-
-#: services.php:80 services.php:87
-msgid "Video Sharing"
-msgstr "Partage de vidéos"
+msgstr ""
 
 #: inc/settings.php:101
 msgid ""
@@ -284,22 +278,17 @@ msgid ""
 "enhance your online experience. You can choose for each category to opt-"
 "in/out whenever you want."
 msgstr ""
-"Nous utilisons des cookies pour assurer les fonctionnalités de base du site "
-"Web et pour améliorer votre expérience en ligne. Vous pouvez choisir pour "
-"chaque catégorie quand vous voulez."
 
 #: inc/settings.php:36
 msgid "We use cookies!"
-msgstr "Nous utilisons des cookies !"
+msgstr ""
 
 #: inc/settings.php:147
 msgid ""
 "We use third-party services to provide functionality and display useful "
 "content on our website."
 msgstr ""
-"Nous utilisons des services tiers pour fournir des fonctionnalités et "
-"afficher du contenu utile sur notre site Web."
 
 #: inc/settings.php:74
 msgid "🍪 Cookies settings"
-msgstr "🍪 Paramètres des cookies"
+msgstr ""

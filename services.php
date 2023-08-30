@@ -9,7 +9,7 @@ function get_services()
       [
         'col1' => '^_ga',
         'col2' => 'tagmanager.google.com',
-        'col3' => __("cc_block.ga_description", 'goodmotion-cookie-consent'),
+        'col3' => __("Analytics", 'goodmotion-cookie-consent'),
         'is_regex' => true,
       ],
     ],
@@ -17,7 +17,7 @@ function get_services()
       [
         'col1' => '^_fbp',
         'col2' => 'facebook.com',
-        'col3' => __("cc_block.fbp_description", 'goodmotion-cookie-consent'),
+        'col3' => __("Analytics", 'goodmotion-cookie-consent'),
         'is_regex' => true,
       ],
     ],
@@ -25,7 +25,7 @@ function get_services()
       [
         'col1' => '^_ga',
         'col2' => 'tagmanager.google.com',
-        'col3' => __("cc_block.ga_description", 'goodmotion-cookie-consent'),
+        'col3' => __("Analytics", 'goodmotion-cookie-consent'),
         'is_regex' => true,
       ],
     ],
@@ -33,43 +33,43 @@ function get_services()
       [
         'col1' => 'bcookie',
         'col2' => 'linkedin.com',
-        'col3' => __("cc_block.lkdin_description", 'goodmotion-cookie-consent'),
+        'col3' => __("Analytics", 'goodmotion-cookie-consent'),
         'is_regex' => true,
       ],
       [
         'col1' => 'bscookie',
         'col2' => 'linkedin.com',
-        'col3' => __("cc_block.lkdin_description", 'goodmotion-cookie-consent'),
+        'col3' => __("Analytics", 'goodmotion-cookie-consent'),
         'is_regex' => true,
       ],
       [
         'col1' => 'AnalyticsSyncHistory',
         'col2' => 'linkedin.com',
-        'col3' => __("cc_block.lkdin_description", 'goodmotion-cookie-consent'),
+        'col3' => __("Analytics", 'goodmotion-cookie-consent'),
         'is_regex' => true,
       ],
       [
         'col1' => 'UserMatchHistory',
         'col2' => 'linkedin.com',
-        'col3' => __("cc_block.lkdin_description", 'goodmotion-cookie-consent'),
+        'col3' => __("Analytics", 'goodmotion-cookie-consent'),
         'is_regex' => true,
       ],
       [
         'col1' => 'li_sugr',
         'col2' => 'linkedin.com',
-        'col3' => __("cc_block.lkdin_description", 'goodmotion-cookie-consent'),
+        'col3' => __("Analytics", 'goodmotion-cookie-consent'),
         'is_regex' => true,
       ],
       [
         'col1' => 'li_gc',
         'col2' => 'linkedin.com',
-        'col3' => __("cc_block.lkdin_description", 'goodmotion-cookie-consent'),
+        'col3' => __("Analytics", 'goodmotion-cookie-consent'),
         'is_regex' => true,
       ],
       [
         'col1' => 'lidc',
         'col2' => 'linkedin.com',
-        'col3' => __("cc_block.lkdin_description", 'goodmotion-cookie-consent'),
+        'col3' => __("Analytics", 'goodmotion-cookie-consent'),
         'is_regex' => true,
       ],
     ],
@@ -77,14 +77,14 @@ function get_services()
       [
         'col1' => 'cc_youtube',
         'col2' => 'youtube.com',
-        'col3' => __("cc_block.video_description", 'goodmotion-cookie-consent')
+        'col3' => __("Video Sharing", 'goodmotion-cookie-consent')
       ],
     ],
     'vimeo' => [
       [
         'col1' => 'cc_vimeo',
         'col2' => 'vimeo.com',
-        'col3' => __("cc_block.video_description", 'goodmotion-cookie-consent')
+        'col3' => __("Video Sharing", 'goodmotion-cookie-consent')
       ],
     ],
   ];

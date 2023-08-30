@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Goodmotion Cookie Consent\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-25 09:43+0000\n"
+"POT-Creation-Date: 2023-08-30 10:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,121 +16,52 @@ msgstr ""
 "X-Loco-Version: 2.6.4; wp-6.3\n"
 "X-Domain: goodmotion-cookie-consent"
 
+#: inc/settings.php:40
+msgid "Accept All"
+msgstr ""
+
+#: inc/settings.php:79
+msgid "Accept all"
+msgstr ""
+
+#: services.php:12 services.php:20 services.php:28 services.php:36
+#: services.php:42 services.php:48 services.php:54 services.php:60
+#: services.php:66 services.php:72
+msgid "Analytics"
+msgstr ""
+
 #: locale.php:5
 msgid "button.save"
 msgstr ""
 
-#: inc/settings.php:106
-msgid "cc_block.analytics_description"
+#: inc/settings.php:177
+msgid ""
+"By clicking on \"Load content\", you accept the deposit of third-party "
+"cookies intended to offer you content."
 msgstr ""
 
-#: inc/settings.php:105
-msgid "cc_block.analytics_title"
-msgstr ""
-
-#: inc/settings.php:133
-msgid "cc_block.display_description"
-msgstr ""
-
-#: inc/settings.php:132
-msgid "cc_block.display_title"
-msgstr ""
-
-#: services.php:20
-msgid "cc_block.fbp_description"
-msgstr ""
-
-#: services.php:12 services.php:28
-msgid "cc_block.ga_description"
-msgstr ""
-
-#: services.php:36 services.php:42 services.php:48 services.php:54
-#: services.php:60 services.php:66 services.php:72
-msgid "cc_block.lkdin_description"
-msgstr ""
-
-#: inc/settings.php:91
-msgid "cc_block.necessary_description"
-msgstr ""
-
-#: inc/settings.php:90
-msgid "cc_block.necessary_title"
-msgstr ""
-
-#: inc/settings.php:87
-msgid "cc_block.table_description"
-msgstr ""
-
-#: services.php:80 services.php:87
-msgid "cc_block.video_description"
-msgstr ""
-
-#: inc/settings.php:39
-msgid "cc_consent.accept_btn"
-msgstr ""
-
-#: inc/settings.php:37
-msgid "cc_consent.description"
-msgstr ""
-
-#: inc/settings.php:50
+#: inc/settings.php:51
 msgid "cc_consent.revision_message"
 msgstr ""
 
-#: inc/settings.php:43
-msgid "cc_consent.settings_btn"
+#: inc/settings.php:81
+msgid "Close"
 msgstr ""
 
-#: inc/settings.php:35
-msgid "cc_consent.title"
+#: inc/settings.php:87
+msgid "Domain"
 msgstr ""
 
-#: inc/settings.php:165
-msgid "cc_iframe.ask_btn"
-msgstr ""
-
-#: inc/settings.php:164
-msgid "cc_iframe.load_btn"
-msgstr ""
-
-#: inc/settings.php:163
-msgid "cc_iframe.video_notice"
-msgstr ""
-
-#: inc/settings.php:65
-msgid "cc_settings.accept_all_btn"
-msgstr ""
-
-#: inc/settings.php:67
-msgid "cc_settings.close_btn"
-msgstr ""
-
-#: inc/settings.php:73
-msgid "cc_settings.col_domain"
-msgstr ""
-
-#: inc/settings.php:70
-msgid "cc_settings.col_name"
-msgstr ""
-
-#: inc/settings.php:79
-msgid "cc_settings.col_usage"
-msgstr ""
-
-#: inc/settings.php:66
-msgid "cc_settings.reject_all_btn"
-msgstr ""
-
-#: inc/settings.php:64
-msgid "cc_settings.save_btn"
-msgstr ""
-
-#: inc/settings.php:60
-msgid "cc_settings.title"
+#: inc/settings.php:179
+msgid "Don't ask again"
 msgstr ""
 
 #: locale.php:23
 msgid "Error on save process !"
+msgstr ""
+
+#: inc/settings.php:146
+msgid "External Display"
 msgstr ""
 
 #. Description of the plugin
@@ -146,8 +77,22 @@ msgstr ""
 msgid "Goodmotion Cookie Consent"
 msgstr ""
 
+#: inc/settings.php:38
+msgid ""
+"Hi, this website uses essential cookies to ensure its proper operation and "
+"tracking cookies to understand how you interact with it."
+msgstr ""
+
 #. Author URI of the plugin
 msgid "https://goodmotion.fr"
+msgstr ""
+
+#: locale.php:33
+msgid "label.bannerSettings"
+msgstr ""
+
+#: locale.php:34
+msgid "label.bannerSettingsHelp"
 msgstr ""
 
 #: locale.php:7
@@ -214,8 +159,16 @@ msgstr ""
 msgid "label.settings.transition"
 msgstr ""
 
+#: inc/settings.php:178
+msgid "Load once"
+msgstr ""
+
 #: locale.php:4
 msgid "main.title"
+msgstr ""
+
+#: inc/settings.php:84
+msgid "Name"
 msgstr ""
 
 #: locale.php:28
@@ -224,6 +177,26 @@ msgstr ""
 
 #: locale.php:25
 msgid "Number of days before the cookie expires (182 days = 6 months)"
+msgstr ""
+
+#: inc/settings.php:121
+msgid "Performance and Analytics cookies"
+msgstr ""
+
+#: inc/settings.php:60
+msgid "Preferences"
+msgstr ""
+
+#: inc/settings.php:44
+msgid "Reject All"
+msgstr ""
+
+#: inc/settings.php:80
+msgid "Reject all"
+msgstr ""
+
+#: inc/settings.php:78
+msgid "Save settings"
 msgstr ""
 
 #: locale.php:22
@@ -246,6 +219,10 @@ msgstr ""
 msgid "script.id_help"
 msgstr ""
 
+#: inc/settings.php:104
+msgid "Strictly necessary cookies"
+msgstr ""
+
 #: locale.php:19
 msgid "tab.layout"
 msgstr ""
@@ -256,4 +233,46 @@ msgstr ""
 
 #: locale.php:20
 msgid "tab.settings"
+msgstr ""
+
+#: inc/settings.php:105
+msgid ""
+"These cookies are essential for the proper functioning of my website. "
+"Without these cookies, the website would not work properly"
+msgstr ""
+
+#: inc/settings.php:122
+msgid ""
+"These cookies collect information about how you use the website, which pages "
+"you visited and which links you clicked on. All of the data is anonymized "
+"and cannot be used to identify you"
+msgstr ""
+
+#: inc/settings.php:93
+msgid "Usage"
+msgstr ""
+
+#: services.php:80 services.php:87
+msgid "Video Sharing"
+msgstr ""
+
+#: inc/settings.php:101
+msgid ""
+"We use cookies to ensure the basic functionalities of the website and to "
+"enhance your online experience. You can choose for each category to opt-"
+"in/out whenever you want."
+msgstr ""
+
+#: inc/settings.php:36
+msgid "We use cookies!"
+msgstr ""
+
+#: inc/settings.php:147
+msgid ""
+"We use third-party services to provide functionality and display useful "
+"content on our website."
+msgstr ""
+
+#: inc/settings.php:74
+msgid "🍪 Cookies settings"
 msgstr ""
