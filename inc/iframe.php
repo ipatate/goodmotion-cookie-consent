@@ -51,7 +51,8 @@ function parseIframe(\DOMXpath $xpath): void
 
       $div = $container->ownerDocument->createElement('div');
       // service name
-      $service_name = $service[0];
+      $keys = array_keys($service);
+      $service_name = $service[$keys[0]];
       // use id or not
       $iframes = namespace\get_iframes_settings();
       $useId = false;

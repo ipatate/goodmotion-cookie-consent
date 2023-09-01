@@ -60,6 +60,20 @@ const iframes = {
 
 if (window.goodmotionCookieConsentLocales.iframe) {
   iframes.services = window.goodmotionCookieConsentLocales.iframe
+  for (const [key, value] of Object.entries(
+    window.goodmotionCookieConsentLocales.iframe,
+  )) {
+    // if thumbnailUrl is a function, convert it to a function
+    if (
+      iframes.services[key].thumbnailUrl &&
+      iframes.services[key].thumbnailUrl.includes('setThumbnail')
+    ) {
+      // create Function who return the function
+      iframes.services[key].thumbnailUrl = Function(
+        'return ' + value.thumbnailUrl,
+      )()
+    }
+  }
 }
 
 manager.run(iframes)

@@ -195,6 +195,10 @@ function get_iframe()
         if (array_key_exists('settings', $iframes[$value])) {
           // var_dump(($iframes[$value]['settings']['thumbnailUrl']));
           $iframes_configs[$value] = $iframes[$value]['settings'];
+          if (array_key_exists('thumbnailUrl', $iframes_configs[$value])) {
+            // remove line breaks
+            $iframes_configs[$value]['thumbnailUrl'] = preg_replace('/\n/m', '', $iframes_configs[$value]['thumbnailUrl']);
+          }
         }
       }
     }

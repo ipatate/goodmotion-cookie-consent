@@ -138,12 +138,13 @@ add_filter('gcc_list_iframes', function ($iframes) {
       [
         'embedUrl' => 'https://player.vimeo.com/video/{data-id}',
         'useId' => true,
-        // 'thumbnailUrl' => 'async (dataId, setThumbnail) => {
-        //         const url = `https://vimeo.com/api/v2/video/${dataId}.json`;
-        //         const response = await (await fetch(url)).json();
-        //         const thumbnailUrl = response[0].thumbnail_large;
-        //         thumbnailUrl && setThumbnail(thumbnailUrl);
-        // }',
+        'thumbnailUrl' => 'async (dataId, setThumbnail) => {
+            const _dataId = dataId.includes(\'?\') ? dataId.split(\'?\')[0] : dataId;
+            const url = `https://vimeo.com/api/v2/video/${_dataId}.json`;
+            const response = await (await fetch(url)).json();
+            const thumbnailUrl = response[0].thumbnail_large;
+            thumbnailUrl && setThumbnail(thumbnailUrl);
+        }',
         'iframe' => [
           'allow' => [
             'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture',
@@ -172,12 +173,13 @@ add_filter('gcc_list_iframes', function ($iframes) {
       [
         'embedUrl' => 'https://www.dailymotion.com/embed/video/{data-id}',
         'useId' => true,
-        // 'thumbnailUrl' => 'async (id, setThumbnail) => {
-        //         const url = `https://api.dailymotion.com/video/${id}?fields=thumbnail_large_url`;
-        //         const response = await (await fetch(url)).json();
-        //         const thumbnailUrl = response.thumbnail_large_url;
-        //         thumbnailUrl && setThumbnail(thumbnailUrl);
-        // ',
+        'thumbnailUrl' => 'async (dataId, setThumbnail) => {
+                const _dataId = dataId.includes(\'=\') ? dataId.split(\'=\')[1] : dataId;
+                const url = `https://api.dailymotion.com/video/${_dataId.replace(\'&\', \'\')}?fields=thumbnail_large_url`;
+                const response = await (await fetch(url)).json();
+                const thumbnailUrl = response.thumbnail_large_url;
+                thumbnailUrl && setThumbnail(thumbnailUrl);
+        }',
         'iframe' => [
           'allow' => [
             'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture',
