@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-4">
+  <div class="grid gap-4 md:grid-cols-2">
     <Tag
       v-for="script in scripts"
       :key="script.slug"

@@ -33,7 +33,7 @@ export default defineConfig({
     outDir: resolve(__dirname, 'dist'),
     emptyOutDir: true,
     manifest: true,
-    cssCodeSplit: false
+    cssCodeSplit: false,
     // target: 'es6',
     rollupOptions: {
       input: resolve(__dirname, 'src/main.js'),
