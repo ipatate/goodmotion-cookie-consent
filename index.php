@@ -86,9 +86,11 @@ add_action('init', __NAMESPACE__ . '\load_textdomain');
  */
 function set_script_translations()
 {
+  wp_register_script( GOODMOTION_COOKIE_CONSENT_NAME . '-admin', '' );
   // wp_set_script_translations(GOODMOTION_COOKIE_CONSENT_NAME . '-admin', GOODMOTION_COOKIE_CONSENT_NAME,  plugin_dir_path(__FILE__) . 'languages');
   // set translation in js var
   wp_localize_script(GOODMOTION_COOKIE_CONSENT_NAME . '-admin', 'goodmotionCookieConsent', include_once(dirname(__FILE__) . '/locale.php'));
+  wp_enqueue_script(GOODMOTION_COOKIE_CONSENT_NAME . '-admin');
 }
 
 add_action('admin_enqueue_scripts', __NAMESPACE__ . '\set_script_translations', 100);
