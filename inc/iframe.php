@@ -30,8 +30,9 @@ function parseIframe(\DOMXpath $xpath): void
 {
   // iframes settings is not empty
   $settings = namespace\gcc_value('settings');
+  if(!$settings)  return;
   $iframesSettings = $settings->iframes;
-  if (count($iframesSettings) === 0) return;
+  if (!$iframesSettings || count($iframesSettings) === 0) return;
 
   // search wp-block-embed__wrapper in class
   $containers = $xpath->query("//div[contains(@class, 'wp-block-embed__wrapper')]");

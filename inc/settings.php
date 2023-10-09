@@ -27,6 +27,7 @@ function hasAnalytics()
 function hasIframe()
 {
   $settings = namespace\gcc_value('settings');
+  if(!$settings) return false;
   return count($settings->iframes) > 0;
 }
 
@@ -60,7 +61,8 @@ function get_consent_modal()
 
   // if settings button is activated instead of reject all
   $settings = namespace\gcc_value('settings');
-  if ($settings->bannerSettingsButton === true) {
+  if ($settings &&
+  $settings->bannerSettingsButton === true) {
     $modal['secondary_btn'] = [
       'text' => __(
         "Preferences",
