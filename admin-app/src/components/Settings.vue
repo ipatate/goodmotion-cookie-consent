@@ -23,6 +23,15 @@
         :help="__('Name of the cookie set by the plugin')"
         name="cookieName"
       />
+      <FormKit
+        value="1000"
+        type="number"
+        :label="__('banner.delayOpening')"
+        :help="
+          __('Number of milliseconds before the banner is displayed (1000ms = 1s)')
+        "
+        name="delay"
+      />
     </fieldset>
     <fieldset>
       <legend>{{ __('label.bannerSettings') }}</legend>

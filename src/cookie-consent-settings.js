@@ -93,6 +93,7 @@ cc.run({
   cookie_name: finalSettings.settings.cookieName,
   cookie_expiration: finalSettings.settings.cookieExpiration,
   page_scripts: true,
+  delay: finalSettings.settings.delay,
   force_consent: true, // default: false
   gui_options: {
     consent_modal: {

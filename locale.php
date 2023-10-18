@@ -32,4 +32,5 @@ return [
   'script.content_help' => [__('script.content_help', 'goodmotion-cookie-consent')],
   'label.bannerSettings' => [__('label.bannerSettings', 'goodmotion-cookie-consent')],
   'label.bannerSettingsHelp' => [__('label.bannerSettingsHelp', 'goodmotion-cookie-consent')],
+  'banner.delayOpening' => [__('banner.delayOpening', 'goodmotion-cookie-consent')],
 ];
