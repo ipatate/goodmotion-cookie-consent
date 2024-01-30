@@ -1,6 +1,6 @@
 {
     "name": "goodmotion-cookie-consent",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "WordPress plugin for use cookie consent system",
     "main": "main.js",
     "scripts": {
@@ -12,17 +12,14 @@
     "keywords": [],
     "author": "infos@goodmotion.fr",
     "license": "ISC",
-    "volta": {
-        "node": "18.17.1"
-    },
     "dependencies": {
         "@orestbida/iframemanager": "^1.2.5",
         "vanilla-cookieconsent": "^2.9.2",
-        "vite": "^4.4.9"
+        "vite": "5.0.12"
     },
     "devDependencies": {
-        "@vitejs/plugin-legacy": "^4.1.1",
+        "@vitejs/plugin-legacy": "5.3.0",
         "cross-env": "^7.0.3",
-        "lightningcss": "^1.21.5"
+        "lightningcss": "1.23.0"
     }
 }

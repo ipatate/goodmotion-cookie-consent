@@ -1,0 +1,35 @@
+{
+  "require": {
+    "wp-performance/presswind-assets": "dev-main"
+  },
+    "autoload": {
+        "psr-4": {
+        "GoodmotionCookieConsent\\": "inc/"
+        }
+    },
+  "require-dev": {},
+  "extra": {
+    "mozart": {
+      "dep_namespace": "GoodmotionCookieConsent\\Dependencies\\",
+      "dep_directory": "/inc/Dependencies/",
+      "classmap_directory": "/inc/",
+      "classmap_prefix": "GCC_",
+      "packages": [
+        "wp-performance/presswind-assets"
+      ],
+      "excluded_packages": [
+      ],
+      "delete_vendor_directories": true
+    }
+  },
+  "scripts": {
+  "post-install-cmd": [
+    "mozart compose",
+    "composer dump-autoload"
+  ],
+  "post-update-cmd": [
+    "mozart compose",
+    "composer dump-autoload"
+  ]
+}
+}

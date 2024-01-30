@@ -4,19 +4,18 @@ namespace GoodmotionCookieConsent\inc;
 
 function get_services_settings()
 {
-  $services = [];
+    $services = [];
 
-  $services = apply_filters('gcc_list_services', $services);
+    $services = apply_filters('gcc_list_services', $services);
 
-  return $services ?? [];
+    return $services ?? [];
 }
-
 
 function get_iframes_settings()
 {
-  $iframes = [];
+    $iframes = [];
 
-  $iframes = apply_filters('gcc_list_iframes', $iframes);
+    $iframes = apply_filters('gcc_list_iframes', $iframes);
 
-  return $iframes ?? [];
+    return $iframes ?? [];
 }
